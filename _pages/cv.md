@@ -12,7 +12,7 @@ redirect_from:
 Education
 ======
 * B.S. in Electronic Information Engineering, The Chinese University of Hong Kong, Shenzhen, 2020
-* Ph.D. in Data Science, The Chinese University of Hong Kong, Shenzhen, 2020 - Present
+* Ph.D. Candidate in Data Science, The Chinese University of Hong Kong, Shenzhen, 2020 - Present
 
 Skills
 ======

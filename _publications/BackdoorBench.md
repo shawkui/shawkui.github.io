@@ -3,8 +3,8 @@ title: "BackdoorBench: A Comprehensive Benchmark of Backdoor Learning"
 collection: publications
 permalink: /publication/BackdoorBench
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-# date: 2009-10-01
-# venue: 'Journal 1'
+date: 2022-06-25
+venue: 'arXiv preprint'
 paperurl: 'https://arxiv.org/pdf/2206.12654'
 citation: 'Wu, Baoyuan, et al. "BackdoorBench: A Comprehensive Benchmark of Backdoor Learning." arXiv preprint arXiv:2206.12654 (2022).'
 ---

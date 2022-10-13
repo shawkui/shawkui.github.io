@@ -3,7 +3,7 @@ title: "BackdoorBench: A Comprehensive Benchmark of Backdoor Learning"
 collection: publications
 permalink: /publication/BackdoorBench
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
-date: 2022
+date: 2022-10-12
 venue: 'NeurIPS 2022 Track Datasets and Benchmarks'
 paperurl: 'https://openreview.net/forum?id=31_U7n18gM7'
 citation: 'Wu, Baoyuan, et al. "BackdoorBench: A Comprehensive Benchmark of Backdoor Learning." NeurIPS 2022 Track Datasets and Benchmarks.'

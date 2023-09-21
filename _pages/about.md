@@ -23,8 +23,8 @@ News
 ======
 ## 2023
 * [2023-09-22] Two papers get accepted by **NeurIPS 2023**, in close collaboration with Mingli Zhu and Mingda Zhang.
-* [2022-04-21] **BackdoorBench** is updated to **the 2nd version** with more methods and analysis tools involved. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/main).
 * [2023-07-18] One paper gets accepted by **ICCV 2023**, in close collaboration with Mingli Zhu.
+* [2023-04-21] **BackdoorBench** is updated to **the 2nd version** with more methods and analysis tools involved. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/main).
 * [2023-01-20] One paper gets accepted by **AISTATS 2023**, in close collaboration with Jiayin Liu.
 
 ## 2022

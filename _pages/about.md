@@ -28,7 +28,7 @@ News
 * [2023-01-20] One paper gets accepted by **AISTATS 2023**, in close collaboration with Jiayin Liu.
 
 ## 2022
-* [2022-09-19] One paper gets accepted by **NeurIPS 2022 Datasets and Benchmarks Track**, in close collaboration with the team in SCLBD.
+* [2022-09-19] One paper gets accepted by **NeurIPS 2022 Datasets and Benchmarks Track**, in close collaboration with our team in SCLBD.
 * [2022-06-28] We release **BackdoorBench**: a comprehensive benchmark of backdoor attack and defense methods. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/v1).
 
 

@@ -22,6 +22,7 @@ Projects and Awards
 News
 ======
 ## 2023
+* [2023-10-03] I was invited as a guest speaker for the tutorial **Backdoor Learning: Recent Advances and Future Trends** in **ICCV 2023**.
 * [2023-09-22] Two papers get accepted by **NeurIPS 2023**, in close collaboration with Mingli Zhu and Mingda Zhang.
 * [2023-07-18] One paper gets accepted by **ICCV 2023**, in close collaboration with Mingli Zhu.
 * [2023-04-21] **BackdoorBench** is updated to **the 2nd version** with more methods and analysis tools involved. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/main).

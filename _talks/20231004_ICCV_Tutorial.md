@@ -3,7 +3,7 @@ title: "Tutorial on Backdoor Learning: Recent Advances and Future Trends"
 collection: talks
 type: "Tutorial"
 permalink: /talks/20231004_ICCV_Tutorial
-venue: "CUHKSZ"
+venue: "ICCV 2023"
 date: 2023-10-04
 location: "Pairs, France"
 ---

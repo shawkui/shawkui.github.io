@@ -1,5 +1,5 @@
 ---
-title: "Loss Surfaces, Mode Connectivity and Model Robustness"
+title: "Tutorial on Backdoor Learning: Recent Advances and Future Trends"
 collection: talks
 type: "Tutorial"
 permalink: /talks/20231004_ICCV_Tutorial

@@ -1,5 +1,5 @@
 ---
-title: "Loss Surfaces, Mode Connectivity and Model Robustness"
+title: "Advanced Works in ICCV 2023: Backdoor Learning I"
 collection: talks
 type: "Weekly Talk"
 permalink: /talks/20231014_AdvanceICCV

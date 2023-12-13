@@ -1,5 +1,5 @@
 ---
-title: "Loss Surfaces, Mode Connectivity and Model Robustness"
+title: "Improving Robustness using Generated Data"
 collection: talks
 type: "Weekly Talk"
 permalink: /talks/20221105_Robust_Data

@@ -22,7 +22,7 @@ Projects and Awards
 News
 ======
 ## 2023
-* [2023-12-27] I receive the **Guo Tai Jun An Scholarship** to recognize my outstanding research achievements in from 2020-2023. 
+* [2023-12-27] I receive the **Guo Tai Jun An Scholarship** to recognize my outstanding research achievements from 2020-2023. 
 * [2023-12-15] We release **Defenses in Adversarial Machine Learning: A Survey**, a comprehensive survey for defense methods in adversarial machine learning. The draft is available at [this link](https://arxiv.org/abs/2312.08890).
 * [2023-12-15] I receive the **2023 Duan Yong Ping Travel Award** to recognize my outstanding research achievements in academic year 2022-2023. 
 * [2023-10-03] I was invited as a guest speaker for the tutorial **Backdoor Learning: Recent Advances and Future Trends** in **ICCV 2023**. Slides are available at [this link](https://backdoor-learning-tutorial.github.io/).

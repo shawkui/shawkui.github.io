@@ -16,6 +16,8 @@ My research interests mainly lie in AI Security and Fairness, Computer Vision an
 
 Projects and Awards
 ======
+* Best Poster Award in The 3rd Doctoral & Postdoctoral Academic Forum
+* 2023 Guo Tai Jun An Scholarship
 * 2023 Duan Yong Ping Travel Award
 * AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
 

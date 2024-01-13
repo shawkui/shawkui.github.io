@@ -20,7 +20,6 @@ Projects and Awards
 * AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
 
 News
-
 ======
 ## 2024
 * [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum**.

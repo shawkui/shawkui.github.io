@@ -20,7 +20,12 @@ Projects and Awards
 * AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
 
 News
+
 ======
+## 2024
+* [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum**.
+
+
 ## 2023
 * [2023-12-27] I receive the **Guo Tai Jun An Scholarship** to recognize my outstanding research achievements from 2020-2023. 
 * [2023-12-15] We release **Defenses in Adversarial Machine Learning: A Survey**, a comprehensive survey for defense methods in adversarial machine learning. The draft is available at [this link](https://arxiv.org/abs/2312.08890).

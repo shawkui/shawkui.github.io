@@ -25,7 +25,7 @@ News
 ======
 ## 2024
 * [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
-* [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum**.
+* [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum** held by Shenzhen Research Institute of Big Data.
 
 
 ## 2023

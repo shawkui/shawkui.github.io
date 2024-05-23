@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of **Professor Hongyuan Zha** and **Professor Baoyuan Wu**. Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ.
+I am currently a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of **Professor Hongyuan Zha**. Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ.
 
 Research
 ======
@@ -24,6 +24,7 @@ Projects and Awards
 News
 ======
 ## 2024
+* [2024-05-23] I leave SCLBD, grateful for the invaluable experiences gained.
 * [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
 * [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum** held by Shenzhen Research Institute of Big Data.
 

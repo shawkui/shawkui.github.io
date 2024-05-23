@@ -14,12 +14,17 @@ Research
 ======
 My research interests mainly lie in AI Security and Fairness, Computer Vision and Optimization, but also include Kernel Methods, Reinforcement Learning, and the application of Machine Learning in economics/marketing.
 
-Projects and Awards
+Awards
 ======
 * Best Poster Award in The 3rd Doctoral & Postdoctoral Academic Forum
 * 2023 Guo Tai Jun An Scholarship
 * 2023 Duan Yong Ping Travel Award
 * AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
+
+Fundings and projects
+======
+* Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
+
 
 News
 ======

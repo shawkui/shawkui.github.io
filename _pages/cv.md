@@ -9,7 +9,7 @@ redirect_from:
 
 {% include base_path %}
 
-[Full CV](https://shawkui.github.io/files/resume_wsk.pdf)
+[Full CV](https://shawkui.github.io/files/resume_wsk.pdf) 
 
 Education
 ======

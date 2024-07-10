@@ -9,6 +9,8 @@ redirect_from:
 
 {% include base_path %}
 
+[Full CV](https://shawkui.github.io/files/resume_wsk.pdf)
+
 Education
 ======
 * B.S. in Electronic Information Engineering, The Chinese University of Hong Kong, Shenzhen, 2020

@@ -11,4 +11,6 @@ redirect_from:
 
 * [ASCII Checker](https://shawkui.github.io/tools/ascii_checker.html): A tool that helps you identify non-ASCII characters in your text or files.
 
-* [Markdown Cleaner](https://shawkui.github.io/tools/md_cleaner.html): A tool that clean the Markdown file to reduce character number.
+* [Markdown Cleaner](https://shawkui.github.io/tools/md_cleaner.html): A tool that cleans the Markdown file to reduce character number.
+
+* [Text Viewer](https://shawkui.github.io/tools/text_viewer.html): A tool that views the text/code files.

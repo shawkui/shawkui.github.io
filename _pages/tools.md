@@ -18,6 +18,6 @@ Online Tools
 
 Local Tools
 
-* [Bib Collector](https://github.com/shawkui/bib_collector)  A simple python program to automatically collect BibTeX info from Google Scholar.
+* [Bib Collector](https://github.com/shawkui/bib_collector):  A simple python program to automatically collect BibTeX info from Google Scholar.
 
-* [Bib Slim](https://github.com/shawkui/bib_slim) A Python script that takes a bib file as input and outputs a slimmed version of the file.
+* [Bib Slim](https://github.com/shawkui/bib_slim): A Python script that takes a bib file as input and outputs a slimmed version of the file.

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BibTeX File Slimmer</title>
+
+<style>
+:root {
+    --bg-color: #f5f5f5;
+    --accent-color: #0080ff;
+    --accent-hover: #0066cc;
+    --accent-active: #004d99;
+    --gray-border: #ccc;
+    --dark-bg: #333;
+    --monospace-font: monospace;
+}
+
+body {
+    background: var(--bg-color);
+    font-family: var(--monospace-font);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background: var(--dark-bg);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 2000px;
+    padding: 20px;
+}
+
+textarea {
+    width: 100%;
+    height: 600px; /* Increased height */
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#input-area, #output-area {
+    flex: 1; /* Ensure equal width */
+    padding: 20px;
+}
+
+#input-area textarea, #output-area textarea {
+    max-width: 100%; /* Allow the textarea to stretch to 100% of the container's width */
+}
+
+/* Style for the select and button elements */
+select, button{
+    margin-top: 10px;
+    padding: 5px;
+    border: 1px solid var(--gray-border);
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    width: 100px; /* Adjust the width as needed */
+    margin-right: 10px; /* Add spacing between the select boxes */
+}
+</style>
+</head>
+<header>
+    <h1>BibTeX File Slimmer</h1>
+</header>
+
+<body>
+<main>
+    <div> 
+        <pre>
+        Usage:
+        * removing all unnecessary
+        * changing venue name to its formal name or abbreviation
+
+        Note:
+        * Each entry should begin with line "@{entry name"
+        * Each filed should only use one line
+        * Each enrty should end with "}"
+    </pre>
+    </div>
+
+    <div id="select-area">
+        <form id="seelct">
+            <h2>Select fields:</h2>
+            <!-- Separate select elements for each field -->
+            <label for="titleSelect">Title:</label>
+            <select id="titleSelect">
+                <option value="title">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="authorSelect">Author:</label>
+            <select id="authorSelect">
+                <option value="author">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="booktitleSelect">Booktitle:</label>
+            <select id="booktitleSelect">
+                <option value="booktitle">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="pagesSelect">Pages:</label>
+            <select id="pagesSelect">
+                <option value="pages">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="yearSelect">Year:</label>
+            <select id="yearSelect">
+                <option value="year">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="organizationSelect">Organization:</label>
+            <select id="organizationSelect">
+                <option value="organization">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="journalSelect">Journal:</label>
+            <select id="journalSelect">
+                <option value="journal">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="volumeSelect">Volume:</label>
+            <select id="volumeSelect">
+                <option value="volume">Keep</option>
+                <option value="">Remove</option>
+            </select>
+            <label for="numberSelect">Number:</label>
+            <select id="numberSelect">
+                <option value="number">Keep</option>
+                <option value="">Remove</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="container">
+        <div id="input-area">
+            <h2>BibTeX Input:</h2>
+            <form id="bibForm">
+                <input type="file" id="bibFile" accept=".bib" onchange="handleFileUpload(event)">
+                <button type="button" onclick="toggleFullName()">Full Names</button>
+                <textarea id="bibTextArea" placeholder="Paste BibTeX text here..."></textarea>
+            </form>
+        </div>
+    
+        <div id="output-area">
+            <h2>BibTeX Output:</h2>
+            <form id="resultForm">
+                <!-- Button to toggle between full name and abbreviation -->
+                <button type="submit">Slim BibTeX</button>
+                <button type="button" id="downloadButton">Download</button>
+    
+                <textarea id="result" placeholder="Output BibTeX text here..."></textarea>
+                <!-- Added download button -->
+            </form>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script>
+    const NameMap = {
+            'Advances in Neural Information Processing Systems': 'NeurIPS', 
+            'Annual Computer Security Applications Conference': 'ACSAC',
+            'Association for the Advancement of Artificial Intelligence': 'AAAI', 
+            'Asian Conference on Machine Learning': 'ACML',
+            'Conference on Computer and Communications Security': 'CCS',
+            'Conference on Computer Vision and Pattern Recognition': 'CVPR',
+            'Conference on Empirical Methods in Natural Language Processing': 'EMNLP',
+            'Conference on Neural Information Processing Systems': 'NeurIPS',
+            'Conference on Neural Information Processing Systems Datasets and Benchmarks Track': 'NeurIPS Datasets and Benchmarks Track',
+            'ACM International Conference on Multimedia': 'ACM Multimedia', 
+            'European Conference on Computer Vision': 'ECCV', 
+            'European Signal Processing Conference': 'EUSIPCO',
+            'European Symposium on Research in Computer Security': 'ESORICS',
+            'Findings of the Association for Computational Linguistics': 'ACL',
+            'NIPS': 'NeurIPS',
+            'Network and Distributed System Security Symposium': 'NDSS Symposium',
+            'International Conference on Machine Learning': 'ICML', 
+            'International Conference on Multimedia and Expo': 'ICME',
+            'International Conference on Learning Representations': 'ICLR', 
+            'International Conference on Computer Vision': 'ICCV', 
+            'International Conference on Computer Vision and Graphics': 'ICCVG',
+            'International Conference on Computer Vision and Image Processing': 'ICCVIP',
+            'International Conference on Computer Vision Theory and Applications': 'VISAPP',
+            'International Joint Conference on Artificial Intelligence': 'IJCAI', 
+            'International Conference on Pattern Recognition': 'ICPR',
+            'International Conference on Robotics and Automation': 'ICRA', 
+            'International Conference on Intelligent Robots and Systems': 'IROS', 
+            'International Conference on Acoustics, Speech and Signal Processing': 'ICASSP',
+            'International Conference on Data Mining': 'ICDM',
+            'International Conference on Image Processing': 'ICIP',
+            'International Conference on Multimedia and Expo': 'ICME',
+            'International Conference on Parallel and Distributed Systems': 'ICPADS',
+            'international joint conference on neural networks' : 'IJCNN',    
+            'International Symposium on Computer Architecture': 'ISCA',
+            'International symposium on Information theory': 'ISIT',
+            'IEEE Conference on Computer Communications': 'INFOCOM',
+            'International Conference of the Biometrics Special Interest Group': 'BIOSIG',
+            'International conference on artificial intelligence and statistics': 'AISTATS',
+            'ACM SIGKDD Conference on Knowledge Discovery and Data Mining': 'KDD',
+            'Machine Learning and Knowledge Discovery in Databases: European Conference': 'ECML-PKDD',
+            'Pattern Recognition and Computer Vision': 'PRCV',
+            'Pacific-Asia conference on knowledge discovery and data mining': 'PAKDD',
+            'Robotics: Science and Systems': 'RSS', 
+            'Research in Attacks, Intrusions, and Defenses': 'RAID',
+            'Winter Conference on Applications of Computer Vision': 'WACV',
+            'Annual International Conference of the {IEEE} Engineering in Medicine & Biology Society': 'EMBC',
+            'ACM International Conference on Information and Knowledge Management': 'CIKM',
+            'International Conference on Computer Aided Verification': 'CAV',
+            'Symposium on Security and Privacy': 'S&P',
+            'Security and Privacy Workshops': 'SPW',
+            'Uncertainty in Artificial Intelligence': 'UAI',
+            'USENIX Security Symposium': 'USENIX Security',
+            '{USENIX} Security Symposium': 'USENIX Security',
+            'Annual Conference of the International Speech Communication Association': 'INTERSPEECH',
+            'Journal of Machine Learning Research': 'JMLR',
+            'Transactions on Pattern Analysis and Machine Intelligence': 'TPAMI',
+            'Transactions on Image Processing': 'TIP',
+            'Transactions on Knowledge and Data Engineering': 'TKDE',
+            'Transactions on Information Forensics and Security': 'TIFS',
+            'Transactions on Multimedia': 'TMM',
+            'Transactions on Signal Processing': 'TSP',
+            'Transactions on Wireless Communications': 'TWC',
+            'Transactions on Communications': 'TCOMM',
+            'Transactions on Networking': 'TON',
+            'Transactions on Mobile Computing': 'TMC',
+            'Transactions on Parallel and Distributed Systems': 'TPDS',
+            'Transactions on Software Engineering': 'TSE',
+            'Transactions on Visualization and Computer Graphics': 'TVCG',
+            'Transactions on Dependable and Secure Computing': 'TDSC',
+            'Transactions on Autonomous and Adaptive Systems': 'TAAS',
+            'Transactions on Computational Social Systems': 'TCSS',
+            'Transactions on Cyber-Physical Systems': 'TCPS',
+            'Transactions on Services Computing': 'TSC',
+            'Transactions on Big Data': 'TBD',
+            'Transactions on Emerging Topics in Computing': 'TETC',
+            'Transactions on Haptics': 'TOH',
+            'IEEE Access': 'IEEE Access',
+            'arXiv e-prints': 'arXiv',
+            'Neural computation': 'Neural Computation',
+            'IEEE Signal Processing Magazine': 'IEEE Signal Processing Magazine',
+            'International Journal of Computer Vision': 'IJCV',
+            'International Journal of Computer Vision and Image Processing': 'IJCVIP',
+            'Neuroimage': 'NeuroImage',
+            'IEEE Internet of Things Journal': 'IEEE Internet of Things Journal',
+            'Electronics': 'Electronics',
+            'Optics Letters': 'Optics Letters', 
+
+    };
+
+    // Function to handle file upload
+    function handleFileUpload(event) {
+        const input = event.target;
+        const reader = new FileReader();
+        reader.onload = function() {
+            const text = reader.result;
+            document.getElementById('bibTextArea').value = text;
+            cleanMarkdown();
+        };
+        reader.readAsText(input.files[0]);
+    }
+
+    // Function to toggle between full name and abbreviation
+    function toggleFullName() {
+        const fullNameButton = document.querySelector('button[type=button]');
+        fullNameButton.textContent = fullNameButton.textContent === 'Full Names' ? 'Abbreviations' : 'Full Names';
+    }
+
+    document.getElementById('resultForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const fileInput = document.getElementById('bibFile');
+        const textArea = document.getElementById('bibTextArea');
+        const source = fileInput.files.length ? fileInput.files[0] : textArea.value;
+        const selectedFields = [
+            document.getElementById('titleSelect').value,
+            document.getElementById('authorSelect').value,
+            document.getElementById('booktitleSelect').value,
+            document.getElementById('pagesSelect').value,
+            document.getElementById('yearSelect').value,
+            document.getElementById('organizationSelect').value,
+            document.getElementById('journalSelect').value,
+            document.getElementById('volumeSelect').value,
+            document.getElementById('numberSelect').value
+        ].filter(field => field); // Remove empty values
+        const useFullName = document.querySelector('button[type=button]').textContent === 'Full Names';
+
+        if (source instanceof File) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const bibContent = e.target.result;
+                const slimmedBib = slimBib(bibContent, selectedFields, useFullName);
+                document.getElementById('result').textContent = slimmedBib;
+            };
+            reader.readAsText(source);
+        } else {
+            const slimmedBib = slimBib(source, selectedFields, useFullName);
+            document.getElementById('result').textContent = slimmedBib;
+        }
+    });
+
+    function slimBib(bibContent, fieldsToKeep, useFullName) {
+        const venues = ['booktitle', 'journal'];
+        const lines = bibContent.split('\n');
+        let filteredLines = [];
+        let insideEntry = false;
+        let sawAtSymbol = false;
+
+        lines.forEach(line => {
+            const trimmedLine = line.trim();
+            if (trimmedLine.startsWith('@')) {
+                sawAtSymbol = true;
+                insideEntry = true;
+                filteredLines.push(trimmedLine);
+            } else if (trimmedLine.startsWith('}')) {
+                insideEntry = false;
+                sawAtSymbol = false;
+                filteredLines.push(trimmedLine);
+                filteredLines.push('');
+            } else if (insideEntry && trimmedLine !== '') {
+                const fieldName = trimmedLine.split('=')[0].trim();
+                if (fieldsToKeep.includes(fieldName)) {
+                    let updatedLine = trimmedLine;
+                    if (venues.includes(fieldName)) {
+                        for (const [fullName, abbreviation] of Object.entries(NameMap)) {
+                            const regex_full = new RegExp(fullName.replace(/[-/]/g, '\\$&'), 'i');
+                            const regex_abb = new RegExp(abbreviation.replace(/[-/]/g, '\\$&'), 'i');
+                            if (regex_full.test(trimmedLine)) {
+                                updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}}`;
+                            }
+                            if (regex_abb.test(trimmedLine)) {
+                                updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}}`;
+                            }
+                        }
+                    }
+                    filteredLines.push(updatedLine);
+                }
+            }
+        });
+
+        return filteredLines.join('\n');
+    }
+
+    // Function to handle file download
+    function downloadBibTeX() {
+        const result = document.getElementById('result');
+        const blob = new Blob([result.textContent], {type: "text/plain;charset=utf-8"});
+        saveAs(blob, "slimmed_bibtex.bib");
+    }
+
+    // Add the download button listener
+    document.getElementById('downloadButton').addEventListener('click', downloadBibTeX);
+</script>
+</body>
+</html>

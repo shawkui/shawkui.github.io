@@ -67,7 +67,7 @@ textarea {
 }
 
 /* Style for the select and button elements */
-select, button{
+select, button {
     margin-top: 10px;
     padding: 5px;
     border: 1px solid var(--gray-border);
@@ -158,8 +158,9 @@ select, button{
             <div id="input-area">
                 <h2>BibTeX Input:</h2>
                 <form id="bibForm">
-                    <input type="file" id="bibFile" accept=".bib" onchange="handleFileUpload(event)">
-                    <button type="button" onclick="toggleFullName()">Formal Names</button>
+                    <input type="file" id="hiddenBibFile" accept=".bib" style="display: none;" onchange="handleFileUpload(event)">
+                    <button type="button" id="selectFileButton">Select BibTeX File</button>
+                    <button type="button" id="toggleFullNameButton" onclick="toggleFullName()">Formal Names</button>
                     <textarea id="bibTextArea" placeholder="Paste BibTeX text here..."></textarea>
                 </form>
             </div>
@@ -302,6 +303,11 @@ select, button{
         };
 
                 
+        document.getElementById('selectFileButton').addEventListener('click', function() {
+            document.getElementById('hiddenBibFile').click();
+        });
+        
+
         // Function to toggle the visibility of the Name Map Editor
         function toggleNamemapEditorVisibility() {
             const namemapArea = document.getElementById('namemap-area');
@@ -327,23 +333,21 @@ select, button{
             reader.onload = function() {
                 const text = reader.result;
                 document.getElementById('bibTextArea').value = text;
-                cleanMarkdown();
             };
             reader.readAsText(input.files[0]);
         }
     
         // Function to toggle between Formal Name and abbreviation
         function toggleFullName() {
-            const fullNameButton = document.querySelector('button[type=button]');
+            const fullNameButton = document.getElementById('toggleFullNameButton');
             fullNameButton.textContent = fullNameButton.textContent === 'Formal Names' ? 'Abbreviations' : 'Formal Names';
         }
     
         document.getElementById('resultForm').addEventListener('submit', function(event) {
             event.preventDefault();
     
-            const fileInput = document.getElementById('bibFile');
             const textArea = document.getElementById('bibTextArea');
-            const source = fileInput.files.length ? fileInput.files[0] : textArea.value;
+            const source = textArea.value;
             const selectedFields = [
                 document.getElementById('titleSelect').value,
                 document.getElementById('authorSelect').value,
@@ -355,20 +359,10 @@ select, button{
                 document.getElementById('volumeSelect').value,
                 document.getElementById('numberSelect').value
             ].filter(field => field); // Remove empty values
-            const useFullName = document.querySelector('button[type=button]').textContent === 'Formal Names';
+            const useFullName = document.getElementById('toggleFullNameButton').textContent === 'Formal Names';
     
-            if (source instanceof File) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const bibContent = e.target.result;
-                    const slimmedBib = slimBib(bibContent, selectedFields, useFullName);
-                    document.getElementById('result').textContent = slimmedBib;
-                };
-                reader.readAsText(source);
-            } else {
-                const slimmedBib = slimBib(source, selectedFields, useFullName);
-                document.getElementById('result').textContent = slimmedBib;
-            }
+            const slimmedBib = slimBib(source, selectedFields, useFullName);
+            document.getElementById('result').textContent = slimmedBib;
         });
     
         function slimBib(bibContent, fieldsToKeep, useFullName) {

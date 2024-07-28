@@ -73,7 +73,7 @@ select, button{
     border-radius: 5px;
     cursor: pointer;
     display: inline-block;
-    width: 100px; /* Adjust the width as needed */
+    width: 150px; /* Adjust the width as needed */
     margin-right: 10px; /* Add spacing between the select boxes */
 }
 </style>
@@ -83,100 +83,136 @@ select, button{
 </header>
 
 <body>
-<main>
-    <div> 
-        <pre>
-        Usage:
-        * removing all unnecessary
-        * changing venue name to its formal name or abbreviation
-
-        Note:
-        * Each entry should begin with line "@{entry name"
-        * Each filed should only use one line
-        * Each enrty should end with "}"
-    </pre>
-    </div>
-
-    <div id="select-area">
-        <form id="seelct">
-            <h2>Select fields:</h2>
-            <!-- Separate select elements for each field -->
-            <label for="titleSelect">Title:</label>
-            <select id="titleSelect">
-                <option value="title">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="authorSelect">Author:</label>
-            <select id="authorSelect">
-                <option value="author">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="booktitleSelect">Booktitle:</label>
-            <select id="booktitleSelect">
-                <option value="booktitle">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="pagesSelect">Pages:</label>
-            <select id="pagesSelect">
-                <option value="pages">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="yearSelect">Year:</label>
-            <select id="yearSelect">
-                <option value="year">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="organizationSelect">Organization:</label>
-            <select id="organizationSelect">
-                <option value="organization">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="journalSelect">Journal:</label>
-            <select id="journalSelect">
-                <option value="journal">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="volumeSelect">Volume:</label>
-            <select id="volumeSelect">
-                <option value="volume">Keep</option>
-                <option value="">Remove</option>
-            </select>
-            <label for="numberSelect">Number:</label>
-            <select id="numberSelect">
-                <option value="number">Keep</option>
-                <option value="">Remove</option>
-            </select>
-        </form>
-    </div>
-
-    <div class="container">
-        <div id="input-area">
-            <h2>BibTeX Input:</h2>
-            <form id="bibForm">
-                <input type="file" id="bibFile" accept=".bib" onchange="handleFileUpload(event)">
-                <button type="button" onclick="toggleFullName()">Full Names</button>
-                <textarea id="bibTextArea" placeholder="Paste BibTeX text here..."></textarea>
+    <main>
+        <div> 
+            <pre>
+            Usage:
+            * removing all unnecessary
+            * changing venue name to its formal name or abbreviation
+    
+            Note:
+            * each entry should begin with line "@{entry name,"
+            * each filed should only use a single line
+            * each enrty should end with line "}"
+    
+            Warning: 
+            * the function is experimental and may not be well developed
+            * a more robust version at <a href="https://github.com/shawkui/bib_slim">https://github.com/shawkui/bib_slim</a>
+        </pre>
+        </div>
+    
+        <div id="select-area">
+            <form id="seelct">
+                <h2>Select fields:</h2>
+                <!-- Separate select elements for each field -->
+                <label for="titleSelect">Title:</label>
+                <select id="titleSelect">
+                    <option value="title">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="authorSelect">Author:</label>
+                <select id="authorSelect">
+                    <option value="author">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="booktitleSelect">Booktitle:</label>
+                <select id="booktitleSelect">
+                    <option value="booktitle">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="pagesSelect">Pages:</label>
+                <select id="pagesSelect">
+                    <option value="pages">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="yearSelect">Year:</label>
+                <select id="yearSelect">
+                    <option value="year">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="organizationSelect">Organization:</label>
+                <select id="organizationSelect">
+                    <option value="organization">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="journalSelect">Journal:</label>
+                <select id="journalSelect">
+                    <option value="journal">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="volumeSelect">Volume:</label>
+                <select id="volumeSelect">
+                    <option value="volume">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+                <label for="numberSelect">Number:</label>
+                <select id="numberSelect">
+                    <option value="number">Keep</option>
+                    <option value="">Remove</option>
+                </select>
             </form>
         </div>
     
-        <div id="output-area">
-            <h2>BibTeX Output:</h2>
-            <form id="resultForm">
-                <!-- Button to toggle between full name and abbreviation -->
-                <button type="submit">Slim BibTeX</button>
-                <button type="button" id="downloadButton">Download</button>
-    
-                <textarea id="result" placeholder="Output BibTeX text here..."></textarea>
-                <!-- Added download button -->
-            </form>
+        <div class="container">
+            <div id="input-area">
+                <h2>BibTeX Input:</h2>
+                <form id="bibForm">
+                    <input type="file" id="bibFile" accept=".bib" onchange="handleFileUpload(event)">
+                    <button type="button" onclick="toggleFullName()">Full Names</button>
+                    <textarea id="bibTextArea" placeholder="Paste BibTeX text here..."></textarea>
+                </form>
+            </div>
+        
+            <div id="output-area">
+                <h2>BibTeX Output:</h2>
+                <form id="resultForm">
+                    <!-- Button to toggle between full name and abbreviation -->
+                    <button type="submit">Slim BibTeX</button>
+                    <button type="button" id="downloadButton">Download</button>
+        
+                    <textarea id="result" placeholder="Output BibTeX text here..."></textarea>
+                    <!-- Added download button -->
+                </form>
+            </div>
         </div>
-    </div>
+    
+        <!-- Add a button to toggle the visibility of the Name Map Editor -->
+        <button id="toggleNamemapEditor">Show Name Map Editor</button>
 
-</main>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
-<script>
-    const NameMap = {
+        <div id="namemap-area" style="display:none;">
+            <h2>Name Map Editor:</h2>
+            <table id="nameMapTable">
+                <thead>
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Abbreviation</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="nameMapEntries">
+                    <!-- Entries will be populated dynamically -->
+                </tbody>
+            </table>
+            <form id="addNameMapEntry">
+                <input type="text" id="newFullName" placeholder="Full Name">
+                <input type="text" id="newAbbreviation" placeholder="Abbreviation">
+                <button type="button" onclick="addNameMapEntry()">Add/Update Entry</button>
+            </form>
+            <pre>
+                Note: Last matched name/abbreviation works.
+            </pre>
+        </div>
+    
+    </main>
+    
+    <footer>
+        <p>BibTeX File Slimmer, 2024</p>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+    <script>
+        const NameMap = {
+            'NIPS': 'NeurIPS',
             'Advances in Neural Information Processing Systems': 'NeurIPS', 
             'Annual Computer Security Applications Conference': 'ACSAC',
             'Association for the Advancement of Artificial Intelligence': 'AAAI', 
@@ -191,7 +227,6 @@ select, button{
             'European Signal Processing Conference': 'EUSIPCO',
             'European Symposium on Research in Computer Security': 'ESORICS',
             'Findings of the Association for Computational Linguistics': 'ACL',
-            'NIPS': 'NeurIPS',
             'Network and Distributed System Security Symposium': 'NDSS Symposium',
             'International Conference on Machine Learning': 'ICML', 
             'International Conference on Multimedia and Expo': 'ICME',
@@ -209,7 +244,7 @@ select, button{
             'International Conference on Image Processing': 'ICIP',
             'International Conference on Multimedia and Expo': 'ICME',
             'International Conference on Parallel and Distributed Systems': 'ICPADS',
-            'international joint conference on neural networks' : 'IJCNN',    
+            'international joint conference on neural networks' : 'IJCNN',
             'International Symposium on Computer Architecture': 'ISCA',
             'International symposium on Information theory': 'ISIT',
             'IEEE Conference on Computer Communications': 'INFOCOM',
@@ -263,111 +298,167 @@ select, button{
             'IEEE Internet of Things Journal': 'IEEE Internet of Things Journal',
             'Electronics': 'Electronics',
             'Optics Letters': 'Optics Letters', 
-
-    };
-
-    // Function to handle file upload
-    function handleFileUpload(event) {
-        const input = event.target;
-        const reader = new FileReader();
-        reader.onload = function() {
-            const text = reader.result;
-            document.getElementById('bibTextArea').value = text;
-            cleanMarkdown();
         };
-        reader.readAsText(input.files[0]);
-    }
 
-    // Function to toggle between full name and abbreviation
-    function toggleFullName() {
-        const fullNameButton = document.querySelector('button[type=button]');
-        fullNameButton.textContent = fullNameButton.textContent === 'Full Names' ? 'Abbreviations' : 'Full Names';
-    }
+                
+        // Function to toggle the visibility of the Name Map Editor
+        function toggleNamemapEditorVisibility() {
+            const namemapArea = document.getElementById('namemap-area');
+            const toggleButton = document.getElementById('toggleNamemapEditor');
 
-    document.getElementById('resultForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-
-        const fileInput = document.getElementById('bibFile');
-        const textArea = document.getElementById('bibTextArea');
-        const source = fileInput.files.length ? fileInput.files[0] : textArea.value;
-        const selectedFields = [
-            document.getElementById('titleSelect').value,
-            document.getElementById('authorSelect').value,
-            document.getElementById('booktitleSelect').value,
-            document.getElementById('pagesSelect').value,
-            document.getElementById('yearSelect').value,
-            document.getElementById('organizationSelect').value,
-            document.getElementById('journalSelect').value,
-            document.getElementById('volumeSelect').value,
-            document.getElementById('numberSelect').value
-        ].filter(field => field); // Remove empty values
-        const useFullName = document.querySelector('button[type=button]').textContent === 'Full Names';
-
-        if (source instanceof File) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const bibContent = e.target.result;
-                const slimmedBib = slimBib(bibContent, selectedFields, useFullName);
-                document.getElementById('result').textContent = slimmedBib;
-            };
-            reader.readAsText(source);
-        } else {
-            const slimmedBib = slimBib(source, selectedFields, useFullName);
-            document.getElementById('result').textContent = slimmedBib;
+            if (namemapArea.style.display === 'none') {
+                namemapArea.style.display = 'block';
+                toggleButton.textContent = 'Hide Name Map Editor';
+            } else {
+                namemapArea.style.display = 'none';
+                toggleButton.textContent = 'Show Name Map Editor';
+            }
         }
-    });
 
-    function slimBib(bibContent, fieldsToKeep, useFullName) {
-        const venues = ['booktitle', 'journal'];
-        const lines = bibContent.split('\n');
-        let filteredLines = [];
-        let insideEntry = false;
-        let sawAtSymbol = false;
+        // Add an event listener to the toggle button
+        document.getElementById('toggleNamemapEditor').addEventListener('click', toggleNamemapEditorVisibility);
 
-        lines.forEach(line => {
-            const trimmedLine = line.trim();
-            if (trimmedLine.startsWith('@')) {
-                sawAtSymbol = true;
-                insideEntry = true;
-                filteredLines.push(trimmedLine);
-            } else if (trimmedLine.startsWith('}')) {
-                insideEntry = false;
-                sawAtSymbol = false;
-                filteredLines.push(trimmedLine);
-                filteredLines.push('');
-            } else if (insideEntry && trimmedLine !== '') {
-                const fieldName = trimmedLine.split('=')[0].trim();
-                if (fieldsToKeep.includes(fieldName)) {
-                    let updatedLine = trimmedLine;
-                    if (venues.includes(fieldName)) {
-                        for (const [fullName, abbreviation] of Object.entries(NameMap)) {
-                            const regex_full = new RegExp(fullName.replace(/[-/]/g, '\\$&'), 'i');
-                            const regex_abb = new RegExp(abbreviation.replace(/[-/]/g, '\\$&'), 'i');
-                            if (regex_full.test(trimmedLine)) {
-                                updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}}`;
-                            }
-                            if (regex_abb.test(trimmedLine)) {
-                                updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}}`;
-                            }
-                        }
-                    }
-                    filteredLines.push(updatedLine);
-                }
+
+        // Function to handle file upload
+        function handleFileUpload(event) {
+            const input = event.target;
+            const reader = new FileReader();
+            reader.onload = function() {
+                const text = reader.result;
+                document.getElementById('bibTextArea').value = text;
+                cleanMarkdown();
+            };
+            reader.readAsText(input.files[0]);
+        }
+    
+        // Function to toggle between full name and abbreviation
+        function toggleFullName() {
+            const fullNameButton = document.querySelector('button[type=button]');
+            fullNameButton.textContent = fullNameButton.textContent === 'Full Names' ? 'Abbreviations' : 'Full Names';
+        }
+    
+        document.getElementById('resultForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const fileInput = document.getElementById('bibFile');
+            const textArea = document.getElementById('bibTextArea');
+            const source = fileInput.files.length ? fileInput.files[0] : textArea.value;
+            const selectedFields = [
+                document.getElementById('titleSelect').value,
+                document.getElementById('authorSelect').value,
+                document.getElementById('booktitleSelect').value,
+                document.getElementById('pagesSelect').value,
+                document.getElementById('yearSelect').value,
+                document.getElementById('organizationSelect').value,
+                document.getElementById('journalSelect').value,
+                document.getElementById('volumeSelect').value,
+                document.getElementById('numberSelect').value
+            ].filter(field => field); // Remove empty values
+            const useFullName = document.querySelector('button[type=button]').textContent === 'Full Names';
+    
+            if (source instanceof File) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const bibContent = e.target.result;
+                    const slimmedBib = slimBib(bibContent, selectedFields, useFullName);
+                    document.getElementById('result').textContent = slimmedBib;
+                };
+                reader.readAsText(source);
+            } else {
+                const slimmedBib = slimBib(source, selectedFields, useFullName);
+                document.getElementById('result').textContent = slimmedBib;
             }
         });
-
-        return filteredLines.join('\n');
-    }
-
-    // Function to handle file download
-    function downloadBibTeX() {
-        const result = document.getElementById('result');
-        const blob = new Blob([result.textContent], {type: "text/plain;charset=utf-8"});
-        saveAs(blob, "slimmed_bibtex.bib");
-    }
-
-    // Add the download button listener
-    document.getElementById('downloadButton').addEventListener('click', downloadBibTeX);
-</script>
-</body>
-</html>
+    
+        function slimBib(bibContent, fieldsToKeep, useFullName) {
+            const venues = ['booktitle', 'journal'];
+            const lines = bibContent.split('\n');
+            let filteredLines = [];
+            let insideEntry = false;
+            let sawAtSymbol = false;
+    
+            lines.forEach(line => {
+                const trimmedLine = line.trim();
+                if (trimmedLine.startsWith('@')) {
+                    sawAtSymbol = true;
+                    insideEntry = true;
+                    filteredLines.push(trimmedLine);
+                } else if (trimmedLine.startsWith('}')) {
+                    insideEntry = false;
+                    sawAtSymbol = false;
+                    filteredLines.push(trimmedLine);
+                    filteredLines.push('');
+                } else if (insideEntry && trimmedLine !== '') {
+                    const fieldName = trimmedLine.split('=')[0].trim();
+                    if (fieldsToKeep.includes(fieldName)) {
+                        let updatedLine = trimmedLine;
+                        if (venues.includes(fieldName)) {
+                            for (const [fullName, abbreviation] of Object.entries(NameMap)) {
+                                const regex_full = new RegExp(fullName.replace(/[-/]/g, '\\$&'), 'i');
+                                const regex_abb = new RegExp(abbreviation.replace(/[-/]/g, '\\$&'), 'i');
+                                if (regex_full.test(trimmedLine)) {
+                                    updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}},`;
+                                }
+                                if (regex_abb.test(trimmedLine)) {
+                                    updatedLine = `${fieldName} = {${useFullName ? fullName : abbreviation}},`;
+                                }
+                            }
+                        }
+                        filteredLines.push(updatedLine);
+                    }
+                }
+            });
+    
+            return filteredLines.join('\n');
+        }
+    
+        // Function to add a new entry to the NameMap
+        function addNameMapEntry() {
+            const fullName = document.getElementById('newFullName').value.trim();
+            const abbreviation = document.getElementById('newAbbreviation').value.trim();
+    
+            if (fullName && abbreviation) {
+                NameMap[fullName] = abbreviation;
+                updateNameMapTable();
+                document.getElementById('newFullName').value = '';
+                document.getElementById('newAbbreviation').value = '';
+            }
+        }
+    
+        // Function to update the NameMap table
+        function updateNameMapTable() {
+            const tbody = document.getElementById('nameMapEntries');
+            tbody.innerHTML = ''; // Clear previous entries
+    
+            for (const [fullName, abbreviation] of Object.entries(NameMap)) {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${fullName}</td>
+                    <td>${abbreviation}</td>
+                    <td><button type="button" onclick="deleteNameMapEntry('${fullName}')">Delete</button></td>
+                `;
+                tbody.appendChild(row);
+            }
+        }
+    
+        // Function to delete an entry from the NameMap
+        function deleteNameMapEntry(fullName) {
+            delete NameMap[fullName];
+            updateNameMapTable();
+        }
+    
+        // Initial population of the NameMap table
+        updateNameMapTable();
+    
+        // Function to handle file download
+        function downloadBibTeX() {
+            const result = document.getElementById('result');
+            const blob = new Blob([result.textContent], {type: "text/plain;charset=utf-8"});
+            saveAs(blob, "slimmed_bibtex.bib");
+        }
+    
+        // Add the download button listener
+        document.getElementById('downloadButton').addEventListener('click', downloadBibTeX);
+    </script>
+    </body>
+    </html>

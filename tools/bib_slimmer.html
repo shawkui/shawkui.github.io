@@ -111,50 +111,94 @@ select, button {
                     <option value="title">Keep</option>
                     <option value="">Remove</option>
                 </select>
+                
                 <label for="authorSelect">Author:</label>
                 <select id="authorSelect">
                     <option value="author">Keep</option>
                     <option value="">Remove</option>
                 </select>
+                
                 <label for="booktitleSelect">Booktitle:</label>
                 <select id="booktitleSelect">
                     <option value="booktitle">Keep</option>
                     <option value="">Remove</option>
                 </select>
-                <label for="pagesSelect">Pages:</label>
-                <select id="pagesSelect">
-                    <option value="pages">Keep</option>
-                    <option value="">Remove</option>
-                </select>
-                <label for="yearSelect">Year:</label>
-                <select id="yearSelect">
-                    <option value="year">Keep</option>
-                    <option value="">Remove</option>
-                </select>
-                <label for="organizationSelect">Organization:</label>
-                <select id="organizationSelect">
-                    <option value="organization">Keep</option>
-                    <option value="">Remove</option>
-                </select>
+                
                 <label for="journalSelect">Journal:</label>
                 <select id="journalSelect">
                     <option value="journal">Keep</option>
                     <option value="">Remove</option>
                 </select>
-                <label for="volumeSelect">Volume:</label>
-                <select id="volumeSelect">
-                    <option value="volume">Keep</option>
+                
+                <label for="pagesSelect">Pages:</label>
+                <select id="pagesSelect">
+                    <option value="pages">Keep</option>
                     <option value="">Remove</option>
                 </select>
-                <label for="numberSelect">Number:</label>
-                <select id="numberSelect">
-                    <option value="number">Keep</option>
+                
+                <label for="yearSelect">Year:</label>
+                <select id="yearSelect">
+                    <option value="year">Keep</option>
                     <option value="">Remove</option>
                 </select>
+
+                <label for="organizationSelect">Organization:</label>
+                <select id="organizationSelect">
+                    <option value="organization">Keep</option>
+                    <option value="">Remove</option>
+                </select>
+
             </form>
         </div>
-    
-        <div class="container">
+
+        <form id="seelct2">
+            <label for="volumeSelect">Volume:</label>
+            <select id="volumeSelect">
+                <option value="">Remove</option>
+                <option value="volume">Keep</option>
+            </select>
+
+
+            <label for="numberSelect">Number:</label>
+            <select id="numberSelect">
+                <option value="">Remove</option>
+                <option value="number">Keep</option>
+            </select>
+        
+            <!-- Additional fields -->
+            <label for="publisherSelect">Publisher:</label>
+            <select id="publisherSelect">
+                <option value="">Remove</option>
+                <option value="publisher">Keep</option>
+            </select>
+            
+            <label for="addressSelect">Address:</label>
+            <select id="addressSelect">
+                <option value="">Remove</option>
+                <option value="address">Keep</option>
+            </select>
+            
+            <label for="doiSelect">DOI:</label>
+            <select id="doiSelect">
+                <option value="">Remove</option>
+                <option value="doi">Keep</option>
+            </select>
+            
+            <label for="urlSelect">URL:</label>
+            <select id="urlSelect">
+                <option value="">Remove</option>
+                <option value="url">Keep</option>
+            </select>
+            
+            <label for="monthSelect">Month:</label>
+            <select id="monthSelect">
+                <option value="">Remove</option>
+                <option value="month">Keep</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="container">
             <div id="input-area">
                 <h2>BibTeX Input:</h2>
                 <form id="bibForm">
@@ -349,15 +393,22 @@ select, button {
             const textArea = document.getElementById('bibTextArea');
             const source = textArea.value;
             const selectedFields = [
-                document.getElementById('titleSelect').value,
-                document.getElementById('authorSelect').value,
-                document.getElementById('booktitleSelect').value,
-                document.getElementById('pagesSelect').value,
-                document.getElementById('yearSelect').value,
-                document.getElementById('organizationSelect').value,
-                document.getElementById('journalSelect').value,
-                document.getElementById('volumeSelect').value,
-                document.getElementById('numberSelect').value
+            document.getElementById('titleSelect').value,
+            document.getElementById('authorSelect').value,
+            document.getElementById('booktitleSelect').value,
+            document.getElementById('pagesSelect').value,
+            document.getElementById('yearSelect').value,
+            document.getElementById('organizationSelect').value,
+            document.getElementById('journalSelect').value,
+            document.getElementById('volumeSelect').value,
+            document.getElementById('numberSelect').value,
+            
+            // Additional fields
+            document.getElementById('publisherSelect').value,
+            document.getElementById('addressSelect').value,
+            document.getElementById('doiSelect').value,
+            document.getElementById('urlSelect').value,
+            document.getElementById('monthSelect').value
             ].filter(field => field); // Remove empty values
             const useFullName = document.getElementById('toggleFullNameButton').textContent === 'Formal Names';
     

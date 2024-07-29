@@ -120,6 +120,7 @@ button:hover::before {
     <input type="file" id="file" onchange="handleFileUpload(event)" />
     <button id="checkbtn" onclick="cleanMarkdown()">Clean Markdown</button>
     <textarea id="outputMarkdown" placeholder="Output here..." rows="10" cols="60"></textarea>
+    <button id="downloadbtn" onclick="downloadMarkdown()">Download Cleaned Markdown</button>
 </main>
 <footer>
     <p>Markdown Cleaner by Shaokui Wei, <a href="https://shawkui.github.io/" style="color: white;">https://shawkui.github.io</a>,  2024</p>
@@ -211,9 +212,18 @@ function cleanMarkdownText(text) {
     return newLines.join('');
 }
 
-function check() {
-    console.log("Checking for non-ASCII characters...");
+function downloadMarkdown() {
+    const output = document.getElementById('outputMarkdown').value;
+    const blob = new Blob([output], {type: 'text/markdown'});
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'cleaned-markdown.md';
+    a.click();
+    // Cleanup the created object URL
+    URL.revokeObjectURL(url);
 }
+
 </script>
 </body>
 </html>

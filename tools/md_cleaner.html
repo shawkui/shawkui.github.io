@@ -179,13 +179,9 @@ function cleanMarkdownText(text) {
             continue;
         }
 
-        trimmedLine = trimmedLine.trim();
-
         if (trimmedLine.startsWith('`')) {
             trimmedLine = trimmedLine.trim();
         }
-
-        trimmedLine = trimmedLine.replace(regexSpaces, ' ');
         trimmedLine = trimmedLine.replace(regexDashes, '-');
 
         if (trimmedLine.includes('| ')) {

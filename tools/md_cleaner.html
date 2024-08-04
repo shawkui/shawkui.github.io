@@ -106,7 +106,10 @@ button:hover::before {
         <pre>
         Usage:
         * removing all the commented lines
-        * removing all the spaces at the end of each line
+        * removing all the empty lines
+        * removing all the spaces at the beginning and end of each line
+        * removing all the spaces before and after the inline code
+        * repalcing all the multiple spaces with a single space
         * repalcing multiple - with a single -
         * replace ' | ' with '|'
     </pre>
@@ -210,18 +213,15 @@ function cleanMarkdownText(text) {
         }
         trimmedLine = trimmedLine.replace(regexDashes, '-');
 
-        if (trimmedLine.includes('| ')) {
-            trimmedLine = trimmedLine.replace(/\| /g, '|');
-        }
-        if (trimmedLine.includes(' |')) {
-            trimmedLine = trimmedLine.replace(/ \|/g, '|');
-        }
-
+        // 使用正则表达式匹配竖线后面的一个或多个空格
+        trimmedLine = trimmedLine.replace(/\| +/g, '|');
+        // 使用正则表达式匹配竖线前面的一个或多个空格
+        trimmedLine = trimmedLine.replace(/ +\|/g, '|');
         if (trimmedLine.startsWith('|') && (newLines.length > 0 && newLines[newLines.length - 1].startsWith('|'))) {
             beginTable = true;
         }
         if (beginTable) {
-            if (trimmedLine.startsWith('|')) {
+            if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
                 trimmedLine = trimmedLine.substring(1, trimmedLine.length - 1);
             } else {
                 beginTable = false;

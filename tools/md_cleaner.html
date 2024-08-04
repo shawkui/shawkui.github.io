@@ -116,11 +116,20 @@ button:hover::before {
     </div>
 
     <h2>Copy/paste or choose a file here to process:</h2>
-    <textarea id="inputMarkdown" placeholder="Paste your Markdown here..."></textarea>
+    <textarea id="inputMarkdown" placeholder="Paste your Markdown here..."  oninput="updateCharacterCount(this)"></textarea>
+    <p>
+        Character count: <span id="originalCount">0</span><br>
+    </p>    
     <input type="file" id="file" onchange="handleFileUpload(event)" />
+
+
     <button id="checkbtn" onclick="cleanMarkdown()">Clean Markdown</button>
-    <textarea id="outputMarkdown" placeholder="Output here..." rows="10" cols="60"></textarea>
+    <textarea id="outputMarkdown" placeholder="Output here..."   oninput="updateCharacterCount(this)" rows="10" cols="60" ></textarea>
+    <p>
+        Character count: <span id="cleanedCount">0</span>
+    </p>    
     <button id="downloadbtn" onclick="downloadMarkdown()">Download Cleaned Markdown</button>
+
 </main>
 <footer>
     <p>Markdown Cleaner by Shaokui Wei, <a href="https://shawkui.github.io/" style="color: white;">https://shawkui.github.io</a>,  2024</p>
@@ -141,8 +150,28 @@ function handleFileUpload(event) {
 function cleanMarkdown() {
     const input = document.getElementById('inputMarkdown').value;
     const cleanedMarkdown = cleanMarkdownText(input);
+
     document.getElementById('outputMarkdown').value = cleanedMarkdown;
+    updateCharacterCounts(input, cleanedMarkdown);
+
 }
+
+function updateCharacterCounts(originalText, cleanedText) {
+    const originalCountElement = document.getElementById('originalCount');
+    const cleanedCountElement = document.getElementById('cleanedCount');
+
+    originalCountElement.textContent = originalText.length;
+    cleanedCountElement.textContent = cleanedText.length;
+}
+
+function updateCharacterCount(textarea) {
+    const originalCountElement = document.getElementById('originalCount');
+    originalCountElement.textContent = document.getElementById('inputMarkdown').value.length;
+
+    const cleanedCountElement = document.getElementById('cleanedCount');
+    cleanedCountElement.textContent = document.getElementById('outputMarkdown').value.length;
+}
+
 
 function cleanMarkdownText(text) {
     const lines = text.split('\n');
@@ -202,10 +231,10 @@ function cleanMarkdownText(text) {
             }
         }
 
-        newLines.push(trimmedLine + '\n');
+        newLines.push(trimmedLine);
     }
 
-    return newLines.join('');
+    return newLines.join('\n');
 }
 
 function downloadMarkdown() {

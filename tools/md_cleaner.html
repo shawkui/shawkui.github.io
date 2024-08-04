@@ -95,6 +95,41 @@ button:hover::before {
     visibility: visible;
     opacity: 1;
 }
+
+
+/* Toast Notification Style */
+.toast {
+    position: fixed;
+    top: 20px; /* Change from bottom to top */
+    left: 40%;
+    transform: translateX(-50%); /* Center horizontally */
+    background-color: var(--accent-color);
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    z-index: 1000;
+    animation: fadeInOut 1s forwards;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    80% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
 </style>
 </head>
 <body>
@@ -125,6 +160,7 @@ button:hover::before {
     <p>
         Character count: <span id="cleanedCount">0</span>
     </p>    
+    <button id="copybtn" onclick="copyMarkdown()">Copy Cleaned Markdown</button>
     <button id="downloadbtn" onclick="downloadMarkdown()">Download Cleaned Markdown</button>
 
 </main>
@@ -241,6 +277,27 @@ function downloadMarkdown() {
     a.click();
     // Cleanup the created object URL
     URL.revokeObjectURL(url);
+}
+
+async function copyMarkdown() {
+    try {
+        const output = document.getElementById('outputMarkdown').value;
+        await navigator.clipboard.writeText(output);
+        displayToast('Cleaned Markdown has been copied to your clipboard!');
+    } catch (err) {
+        console.error('Failed to copy text: ', err);
+    }
+}
+
+function displayToast(message) {
+    const toast = document.createElement('div');
+    toast.className = 'toast';
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        document.body.removeChild(toast);
+    }, 1000); // Remove the toast after 1 second
 }
 
 </script>

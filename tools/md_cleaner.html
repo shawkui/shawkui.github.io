@@ -142,6 +142,8 @@ button:hover::before {
         Usage:
         * removing all the commented lines
         * removing all the spaces at the end of each line
+        * removing all the multiple spaces to a single space (except line start)
+        * removing all the multiple empty lines
         * repalcing multiple - with a single - (for table)
         * replace ' | ' with '|' (for table)
     </pre>
@@ -205,65 +207,101 @@ function updateCharacterCount(textarea) {
     cleanedCountElement.textContent = document.getElementById('outputMarkdown').value.length;
 }
 
+function countChar(str, char) {
+    return str.split('').filter(function(letter) {
+        return letter === char;
+    }).length;
+}
 
 function cleanMarkdownText(text) {
+    // Split the text into lines
     const lines = text.split('\n');
     let newLines = [];
-    let comment = false;
-    let beginTable = false;
+    let inComment = false;
+    let inTable = false;
 
-    const regexComment = /<!--(.*?)-->/g;
-    const regexSpaces = /\s+/g;
-    const regexDashes = /-+/g;
+    // Regular expressions for matching and replacing patterns
+    const regexComment = /<!--(.*?)-->/gs; // Match comments
+    const regexSpaces = /\s+/g; // Match one or more spaces
+    const regexDashes = /-+/g; // Match one or more dashes
+    const regexLeadingSpaces = /^\s*/; // Match leading spaces
+
+    let maxSepCount = 0; // Track the maximum number of separators (pipes)
 
     for (const line of lines) {
-        let trimmedLine = line.trimEnd();
+        let trimmedLine = line.trim();
+        let leadingSpaces = line.match(regexLeadingSpaces)[0]; // Get the leading spaces
 
+        // Handle multi-line comments
         if (trimmedLine.includes('<!--')) {
             if (trimmedLine.includes('-->')) {
+                // Inline comment: remove it
                 trimmedLine = trimmedLine.replace(regexComment, '');
             } else {
-                comment = true;
+                // Start of multi-line comment
+                inComment = true;
                 continue;
             }
         }
 
         if (trimmedLine.includes('-->')) {
+            // End of multi-line comment: remove the ending
             trimmedLine = trimmedLine.replace(/.*?-->/g, '');
-            comment = false;
+            inComment = false;
         }
 
-        if (comment) {
+        if (inComment) {
+            // Skip the line if we're inside a comment
             continue;
         }
 
-        if (trimmedLine.trim() === '' && newLines.length > 0 && newLines[newLines.length - 1] === '\n') {
+        // Remove consecutive empty lines
+        if (trimmedLine === '' && newLines.length > 0 && newLines[newLines.length - 1] === '') {
             continue;
         }
 
-        if (trimmedLine.startsWith('`')) {
-            trimmedLine = trimmedLine.trim();
-        }
+        // Normalize dashes
         trimmedLine = trimmedLine.replace(regexDashes, '-');
 
-        // 使用正则表达式匹配竖线后面的一个或多个空格
+        // Normalize spaces around pipes
         trimmedLine = trimmedLine.replace(/\| +/g, '|');
-        // 使用正则表达式匹配竖线前面的一个或多个空格
         trimmedLine = trimmedLine.replace(/ +\|/g, '|');
-        if (trimmedLine.startsWith('|') && (newLines.length > 0 && newLines[newLines.length - 1].startsWith('|'))) {
-            beginTable = true;
+        // Normalize multiple spaces to single spaces
+        trimmedLine = trimmedLine.replace(regexSpaces, ' ');
+
+        // Count the number of separators (pipes)
+        const sepCount = (trimmedLine.match(/\|/g) || []).length;
+
+        // Detect start of a table
+        if (trimmedLine.startsWith('|') && (newLines.length > 0 && newLines[newLines.length - 1].trim().startsWith('|'))) {
+            inTable = true;
         }
-        if (beginTable) {
+
+        // Handle table rows
+        if (inTable) {
             if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
-                trimmedLine = trimmedLine.substring(1, trimmedLine.length - 1);
+                if (maxSepCount === sepCount) {
+                    // Remove outer pipes from the row
+                    trimmedLine = trimmedLine.substring(1, trimmedLine.length - 1);
+                }
             } else {
-                beginTable = false;
+                // End of table
+                inTable = false;
             }
         }
 
-        newLines.push(trimmedLine);
+        // Update the maximum number of separators
+        if (sepCount === 0) {
+            maxSepCount = 0;
+        } else {
+            maxSepCount = Math.max(sepCount, maxSepCount);
+        }
+
+        // Add the processed line to the new list
+        newLines.push(leadingSpaces + trimmedLine);
     }
 
+    // Join the processed lines back into a string
     return newLines.join('\n');
 }
 

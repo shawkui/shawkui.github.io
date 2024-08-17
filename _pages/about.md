@@ -44,15 +44,13 @@ News
 * [2023-04-21] **BackdoorBench** is updated to **the 2nd version** with more methods and analysis tools involved. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/main).
 * [2023-01-20] One paper gets accepted by **AISTATS 2023**, in close collaboration with Jiayin Liu.
 
-<details>
-<summary>More</summary>
+
   
 ## 2022 & Before
 * [2022-09-19] One paper gets accepted by **NeurIPS 2022 Datasets and Benchmarks Track**, in close collaboration with our team in SCLBD.
 * [2022-06-28] We release **BackdoorBench**: a comprehensive benchmark of backdoor attack and defense methods. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/v1).
 * [2021-08-01] I join SCLBD to focus on AI Security research.
-  
-</details>
+
 
 
 

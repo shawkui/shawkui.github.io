@@ -17,7 +17,7 @@ Online Tools
 * [Text Viewer](https://shawkui.github.io/tools/text_viewer.html): A tool that views the text/code files.
 
 * [Bib Slim](https://shawkui.github.io/tools/bib_slimmer.html): An online tool that takes a bib file as input and outputs a slimmed version of the file.
-* 
+  
 * [LaTeX Symbol Replacer](https://shawkui.github.io/tools/symbol_replacer.html): A simple tools to replace customized symbols in LaTex.
 
 Local Tools

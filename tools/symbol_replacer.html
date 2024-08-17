@@ -73,11 +73,17 @@
             <div class="textarea-pair">
                 <div>
                     <label for="custom-symbols">Custom Symbols:</label><br>
-                    <textarea id="custom-symbols" rows="10" cols="50"></textarea>
+                    <textarea id="custom-symbols" rows="10" cols="50" placeholder="Step 1: Paste the customized command
+
+\def\sT{{\mathbb{T}}}"></textarea>
+
                 </div>
                 <div>
                     <label for="parsed-commands">Parsed Commands:</label><br>
-                    <textarea id="parsed-commands" rows="10" cols="50" ></textarea>
+                    <textarea id="parsed-commands" rows="10" cols="50" placeholder="Step 2: Check and/or update the parsed command
+Note: An additional / to avoid some issues
+
+\\sT : {\mathbb{T}}" ></textarea>
                 </div>
             </div>
             <div class="button-container"> <!-- Wrap buttons in a container -->
@@ -87,11 +93,15 @@
             <div class="textarea-pair">
                 <div>
                     <label for="input-formula">Input Formula:</label><br>
-                    <textarea id="input-formula" rows="10" cols="50"></textarea>
+                    <textarea id="input-formula" rows="10" cols="50" placeholder="Step 3: Paste the tex code
+
+\sT^2" ></textarea>
                 </div>
                 <div>
                     <label for="output-formula">Output Formula:</label><br>
-                    <textarea id="output-formula" rows="10" cols="50" readonly></textarea>
+                    <textarea id="output-formula" rows="10" cols="50" placeholder="Step 4: Replace
+                    
+{\mathbb{T}}^2" ></textarea>
                 </div>
             </div>
             <div class="button-container"> <!-- Wrap buttons in a container -->

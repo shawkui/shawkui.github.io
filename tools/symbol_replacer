@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/30787845?v=4&size=64" type="image/png">
+
+    <title>LaTeX Symbol Replacer</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --accent-color: #0080ff;
+            --accent-hover: #0066cc;
+            --accent-active: #004d99;
+            --gray-border: #ccc;
+            --dark-bg: #333;
+            --monospace-font: monospace;
+        }
+
+        body {
+            background: var(--bg-color);
+            font-family: var(--monospace-font);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure body covers at least the full viewport height */
+        }
+
+        header,
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .content {
+            flex: 1; /* Take up all available space between header and footer */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .textarea-pair {
+            display: flex;
+            gap: 1em;
+            justify-content: center; /* Center textareas horizontally */
+        }
+
+        textarea {
+            flex: 1;
+            min-width: 0; /* Prevents textarea from collapsing when there's no content */
+        }
+
+        /* Add a container for buttons to center them */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+
+        button {
+            margin: 0.5em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LaTeX Symbol Replacer</h1>
+    </header>
+    <div class="content"> <!-- Add a content container -->
+        <form id="latex-form">
+            <div class="textarea-pair">
+                <div>
+                    <label for="custom-symbols">Custom Symbols:</label><br>
+                    <textarea id="custom-symbols" rows="10" cols="50"></textarea>
+                </div>
+                <div>
+                    <label for="parsed-commands">Parsed Commands:</label><br>
+                    <textarea id="parsed-commands" rows="10" cols="50" ></textarea>
+                </div>
+            </div>
+            <div class="button-container"> <!-- Wrap buttons in a container -->
+                <button type="button" onclick="parseSymbols()">Parse Symbols</button>
+            </div>
+
+            <div class="textarea-pair">
+                <div>
+                    <label for="input-formula">Input Formula:</label><br>
+                    <textarea id="input-formula" rows="10" cols="50"></textarea>
+                </div>
+                <div>
+                    <label for="output-formula">Output Formula:</label><br>
+                    <textarea id="output-formula" rows="10" cols="50" readonly></textarea>
+                </div>
+            </div>
+            <div class="button-container"> <!-- Wrap buttons in a container -->
+                <button type="button" onclick="replaceSymbols()">Replace Symbols</button>
+            </div>
+        </form>
+    </div> <!-- End of content container -->
+
+    <script>
+        function parseSymbols() {
+            const customSymbols = document.getElementById('custom-symbols').value;
+            const parsedCommands = document.getElementById('parsed-commands');
+
+            // Clear the parsed commands before parsing
+            parsedCommands.value = '';
+
+            // Parse the custom symbols into an object and display them
+            const symbolMap = parseCustomSymbols(customSymbols);
+            for (const [key, value] of Object.entries(symbolMap)) {
+                parsedCommands.value += `\\${key} : ${value}\n`;
+            }
+        }
+
+        function replaceSymbols() {
+            const parsedCommands = document.getElementById('parsed-commands').value;
+            const inputFormula = document.getElementById('input-formula').value;
+            const outputFormula = document.getElementById('output-formula');
+
+            // Clear the output formula
+            outputFormula.value = '';
+
+            // Parse the parsed commands into an object
+            const symbolMap = parseCustomSymbolsFromParsed(parsedCommands);
+
+            // Replace the symbols in the input formula
+            let replacedFormula = inputFormula;
+            for (const [key, value] of Object.entries(symbolMap)) {
+                replacedFormula = replacedFormula.split(key).join(value);
+            }
+
+            // Display the result
+            outputFormula.value = replacedFormula;
+        }
+
+        function parseCustomSymbols(symbolsText) {
+            const symbolMap = {};
+            const lines = symbolsText.split('\n');
+            lines.forEach(line => {
+                if (line.trim().startsWith('%')) return; // Ignore comments
+                const match = line.match(/\\def(.*?)\{(.*?)\}$/);
+                if (match) {
+                    const symbol = match[1].trim();
+                    const replacement = match[2].trim();
+                    symbolMap[symbol] = replacement;
+                }
+            });
+            return symbolMap;
+        }
+
+        function parseCustomSymbolsFromParsed(parsedCommandsText) {
+            const symbolMap = {};
+            const lines = parsedCommandsText.split('\n');
+            lines.forEach(line => {
+                if (line.trim() === '') return; // Skip empty lines
+                const parts = line.split(' : ');
+                if (parts.length === 2) {
+                    const symbol = parts[0].trim().substring(1); // Remove leading backslash
+                    const replacement = parts[1].trim();
+                    symbolMap[symbol] = replacement;
+                }
+            });
+            return symbolMap;
+        }
+    </script>
+
+    <footer>
+        <p>LaTeX Symbol Replacer by Shaokui Wei, <a href="https://shawkui.github.io/"
+                style="color: white;">https://shawkui.github.io</a>, 2024</p>
+    </footer>
+
+</body>
+</html>

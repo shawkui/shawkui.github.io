@@ -157,6 +157,35 @@ Note: An additional \ to avoid some issues
                     const replacement = match[2].trim();
                     symbolMap[symbol] = replacement;
                 }
+
+                const match_com = line.match(/\\newcommand\{(.*?)\}\{(.*?)\}$/);
+                if (match_com) {
+                    const symbol = match_com[1].trim();
+                    const replacement = match_com[2].trim();
+                    symbolMap[symbol] = replacement;
+                }
+
+                const match_com_ = line.match(/\\newcommand\*\{(.*?)\}\{(.*?)\}$/);
+                if (match_com_) {
+                    const symbol = match_com_[1].trim();
+                    const replacement = match_com_[2].trim();
+                    symbolMap[symbol] = replacement;
+                }
+
+
+                const match_opt = line.match(/\\DeclareMathOperator\{(.*?)\}\{(.*?)\}$/);
+                if (match_opt) {
+                    const symbol = match_opt[1].trim();
+                    const replacement = match_opt[2].trim();
+                    symbolMap[symbol] = replacement;
+                }
+
+                const match_opt_ = line.match(/\\DeclareMathOperator\*\{(.*?)\}\{(.*?)\}$/);
+                if (match_opt_) {
+                    const symbol = match_opt_[1].trim();
+                    const replacement = match_opt_[2].trim();
+                    symbolMap[symbol] = replacement;
+                }
             });
             return symbolMap;
         }

@@ -27,3 +27,5 @@ Local Tools
 * [Bib Collector](https://github.com/shawkui/bib_collector):  A simple python program to automatically collect BibTeX info from Google Scholar.
 
 * [Bib Slim](https://github.com/shawkui/bib_slim): A Python script that takes a bib file as input and outputs a slimmed version of the file.
+
+* [PDF to Image](https://github.com/shawkui/pdf2img): A lightweight application that efficiently converts PDF into various image formats, including PNG, JPEG, TIFF, PDF, PS, EPS, and SVG. Specializes in high-quality SVG output.

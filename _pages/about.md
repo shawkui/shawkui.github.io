@@ -14,21 +14,10 @@ Research
 ======
 My research interests mainly lie in AI Security and Fairness, Computer Vision and Optimization, but also include Kernel Methods, Reinforcement Learning, and the application of Machine Learning in economics/marketing.
 
-Awards
-======
-* Best Poster Award in The 3rd Doctoral & Postdoctoral Academic Forum
-* 2023 Guo Tai Jun An Scholarship
-* 2023 Duan Yong Ping Travel Award
-* AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
-
-Fundings and projects
-======
-* Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
-
-
 News
 ======
 ## 2024
+* [2024-08-25] I released some useful tools for academic writing and rebuttal at [here](https://shawkui.github.io/tools/).
 * [2024-05-23] I leave SCLBD, grateful for the invaluable experiences gained.
 * [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
 * [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum** held by Shenzhen Research Institute of Big Data.
@@ -45,13 +34,72 @@ News
 * [2023-01-20] One paper gets accepted by **AISTATS 2023**, in close collaboration with Jiayin Liu.
 
 
+<details>
+    <summary><h2>2022 & Before</h2></summary>
+    <ul>
+      <li>
+       [2022-09-19] One paper gets accepted by <strong>NeurIPS 2022 Datasets and Benchmarks Track</strong>, in close collaboration with our team in SCLBD.
+      </li>
+      <li>
+      [2022-06-28] We release <strong>BackdoorBench</strong>: a comprehensive benchmark of backdoor attack and defense methods. The code and data are available at <a href="https://github.com/SCLBD/BackdoorBench/tree/v1">this link</a>.
+      </li>
+      <li>
+       [2021-08-01] I join SCLBD to focus on AI Security research.
+      </li>
+    </ul>
+</details>
+
+Fundings and projects
+======
+* Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
+
   
-## 2022 & Before
-* [2022-09-19] One paper gets accepted by **NeurIPS 2022 Datasets and Benchmarks Track**, in close collaboration with our team in SCLBD.
-* [2022-06-28] We release **BackdoorBench**: a comprehensive benchmark of backdoor attack and defense methods. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/v1).
-* [2021-08-01] I join SCLBD to focus on AI Security research.
+Awards
+======
+* Best Poster Award in The 3rd Doctoral & Postdoctoral Academic Forum
+* 2023 Guo Tai Jun An Scholarship
+* 2023 Duan Yong Ping Travel Award
+* AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
 
+Patents
+======
+* Shaokui Wei, Baoyuan Wu, Mingda Zhang, Hongyuan Zha. Method and system for eliminating shared adversarial samples in backdoor defense. China. Patent No. CN117390622A. Jan. 12, 2024.
+* Mingli Zhu, Shaokui Wei, Baoyuan Wu. Method and system for backdoor defense by purifying toxic features through neural polarizers. China. Patent No. CN116629319A. Aug. 22, 2023.
+* Baoyuan Wu, Mingli Zhu, Shaokui Wei, Li Shen, Yanbo Fan. Backdoor defense method, terminal device, and computer-readable storage medium. China. Patent No. CN116578974A. Aug. 11, 2023.
 
+Selected Papers 
+======
+(*Indicates equal contribution, #Indicates corresponding author)
+* **Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples.**  
+  *Authors*: **Shaokui Wei**, Mingda Zhang, Hongyuan Zha, Baoyuan Wu.  
+  *Publication*: NeurIPS 2023.  
+  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/520425a5a4c2fb7f7fc345078b188201-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/SAU).  
+  
+* **Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features.**  
+  *Authors*: Mingli Zhu*, **Shaokui Wei***, Hongyuan Zha, Baoyuan Wu.  
+  *Publication*: NeurIPS 2023.  
+  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/03df5246cc78af497940338dd3eacbaa-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/NPD).  
+
+* **Mean Parity Fair Regression in RKHS.**  
+  *Authors*: **Shaokui Wei**, Jiayin Liu, Bing Li, Hongyuan Zha.  
+  *Publication*: AISTATS 2023.  
+  *Links*: [Paper](https://proceedings.mlr.press/v206/wei23a/wei23a.pdf) | [Code](https://github.com/shawkui/MP_Fair_Regression) | [Website](https://shawkui.github.io/publication/MP_fair).
+
+* **Backdoorbench: A comprehensive benchmark of backdoor learning.**  
+  *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  
+  *Publication*: NeurIPS 2022 Dataset and Benchmark Track.  
+  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/4491ea1c91aa2b22c373e5f1dfce234f-Paper-Datasets_and_Benchmarks.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
+
+* **VDC: Versatile Data Cleanser for Detecting Dirty Samples via Visual-Linguistic Inconsistency.**  
+  *Authors*: Zihao Zhu, Mingda Zhang, **Shaokui Wei**, Bingzhe Wu, Baoyuan Wu.  
+  *Publication*: ICLR 2024.  
+  *Links*: [Paper](https://openreview.net/pdf?id=ygxTuVz9eU) | [Code](https://github.com/zihao-ai/vdc) | [Website](https://versatile-data-cleanser.github.io/).  
+  
+  
+* **Enhancing Fine-Tuning Based Backdoor Defense with Sharpness-Aware Minimization.**  
+  *Authors*: Mingli Zhu, **Shaokui Wei**, Li Shen, Yanbo Fan, Baoyuan Wu.  
+  *Publication*: ICCV 2023.  
+  *Links*: [Paper](http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_Enhancing_Fine-Tuning_Based_Backdoor_Defense_with_Sharpness-Aware_Minimization_ICCV_2023_paper.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/FT_SAM).  
 
 
 

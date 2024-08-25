@@ -35,7 +35,7 @@ News
 
 
 <details>
-    <summary><h2>2022 & Before</h2></summary>
+    <summary>2022 & Before</summary>
     <ul>
       <li>
        [2022-09-19] One paper gets accepted by <strong>NeurIPS 2022 Datasets and Benchmarks Track</strong>, in close collaboration with our team in SCLBD.

@@ -63,9 +63,9 @@ Awards
 
 Patents
 ======
-* Shaokui Wei, Baoyuan Wu, Mingda Zhang, Hongyuan Zha. Method and system for eliminating shared adversarial samples in backdoor defense (一种后门防御中消除共享对抗样本的方法及后门防御系统). China. Patent No. CN117390622A. Jan. 12, 2024.
-* Mingli Zhu, Shaokui Wei, Baoyuan Wu. Method and system for backdoor defense by purifying toxic features through neural polarizers (通过神经偏振器净化有毒特征的后门防御方法及系统). China. Patent No. CN116629319A. Aug. 22, 2023.
-* Baoyuan Wu, Mingli Zhu, Shaokui Wei, Li Shen, Yanbo Fan. Backdoor defense method, terminal device, and computer-readable storage medium. China (后门防御方法、终端设备及计算机可读存储介质). Patent No. CN116578974A. Aug. 11, 2023.
+* **Shaokui Wei**, Baoyuan Wu, Mingda Zhang, Hongyuan Zha. Method and system for eliminating shared adversarial samples in backdoor defense (一种后门防御中消除共享对抗样本的方法及后门防御系统). China. Patent No. CN117390622A. Jan. 12, 2024.
+* Mingli Zhu, **Shaokui Wei**, Baoyuan Wu. Method and system for backdoor defense by purifying toxic features through neural polarizers (通过神经偏振器净化有毒特征的后门防御方法及系统). China. Patent No. CN116629319A. Aug. 22, 2023.
+* Baoyuan Wu, Mingli Zhu, **Shaokui Wei**, Li Shen, Yanbo Fan. Backdoor defense method, terminal device, and computer-readable storage medium. China (后门防御方法、终端设备及计算机可读存储介质). Patent No. CN116578974A. Aug. 11, 2023.
 
 Selected Papers 
 ======
@@ -73,12 +73,12 @@ Selected Papers
 * **Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples.**  
   *Authors*: **Shaokui Wei**, Mingda Zhang, Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2023.  
-  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/520425a5a4c2fb7f7fc345078b188201-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/SAU).  
+  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/520425a5a4c2fb7f7fc345078b188201-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/sau.py) | [Website](https://shawkui.github.io/publication/SAU).  
   
 * **Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features.**  
   *Authors*: Mingli Zhu*, **Shaokui Wei***, Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2023.  
-  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/03df5246cc78af497940338dd3eacbaa-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/NPD).  
+  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/03df5246cc78af497940338dd3eacbaa-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/npd.py) | [Website](https://shawkui.github.io/publication/NPD).  
 
 * **Mean Parity Fair Regression in RKHS.**  
   *Authors*: **Shaokui Wei**, Jiayin Liu, Bing Li, Hongyuan Zha.  
@@ -99,7 +99,7 @@ Selected Papers
 * **Enhancing Fine-Tuning Based Backdoor Defense with Sharpness-Aware Minimization.**  
   *Authors*: Mingli Zhu, **Shaokui Wei**, Li Shen, Yanbo Fan, Baoyuan Wu.  
   *Publication*: ICCV 2023.  
-  *Links*: [Paper](http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_Enhancing_Fine-Tuning_Based_Backdoor_Defense_with_Sharpness-Aware_Minimization_ICCV_2023_paper.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/FT_SAM).  
+  *Links*: [Paper](http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_Enhancing_Fine-Tuning_Based_Backdoor_Defense_with_Sharpness-Aware_Minimization_ICCV_2023_paper.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/ft-sam.py) | [Website](https://shawkui.github.io/publication/FT_SAM).  
 
 
 

@@ -36,10 +36,15 @@ sizes = [
     ((144, 144), 'apple'),
     ((152, 152), 'apple'),
     ((180, 180), 'apple'),
-    ((32, 32), 'favicon'),
+    ((36, 36), 'android'),
+    ((48, 48), 'android'),
+    ((72, 72), 'android'),
+    ((96, 96), 'android'),
+    ((144, 144), 'android'),
     ((192, 192), 'android'),
+    ((16, 16), 'favicon'),
+    ((32, 32), 'favicon'),
     ((96, 96), 'favicon'),
-    ((16, 16), 'favicon')
 ]
 
 generate_icons(base_image_path, output_dir, sizes)

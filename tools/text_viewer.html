@@ -1,204 +1,213 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Text Viewer</title>
-<link rel="icon" href="https://shawkui.github.io/images/favicon-96x96.png?v=M44lzPylqQ" type="image/png">
+    <title>Text Viewer</title>
+    <link rel="icon" href="https://shawkui.github.io/images/favicon-96x96.png?v=M44lzPylqQ" type="image/png">
 
-<!-- External CSS and JS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
+    <!-- External CSS and JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/themes/prism.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.28.0/prism.min.js"></script>
 
-<!-- Custom Styles -->
-<style>
-:root {
-    --bg-color: #f5f5f5;
-    --text-color: #333;
-    --accent-color: #0080ff;
-    --accent-hover: #0066cc;
-    --accent-active: #004d99;
-    --border-color: #ccc;
-}
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --accent-color: #0080ff;
+            --accent-hover: #0066cc;
+            --accent-active: #004d99;
+            --border-color: #ccc;
+        }
 
-body {
-    background: var(--bg-color);
-    font-family: monospace;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        body {
+            background: var(--bg-color);
+            font-family: monospace;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-header, footer {
-    background: var(--text-color);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+        header,
+        footer {
+            background: var(--text-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
 
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-#file-upload {
-    margin-bottom: 20px;
-}
+        #file-upload {
+            margin-bottom: 20px;
+        }
 
-#src {
-    margin: 0px auto;
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid var(--border-color);
-    border-radius: 5px;
-    resize: vertical;
-    white-space: pre-wrap; /* Preserve line breaks */
-}
+        #src {
+            margin: 0px auto;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            resize: vertical;
+            white-space: pre-wrap;
+            /* Preserve line breaks */
+        }
 
-#report {
-    margin-top: 20px;
-    width: 100%;
-    max-width: 800px;
-}
+        #report {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
 
-#checkbtn {
-    background: var(--accent-color);
-    color: white;
-    cursor: pointer;
-    font-size: 1.5em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.2s ease-in-out;
-}
+        #checkbtn {
+            background: var(--accent-color);
+            color: white;
+            cursor: pointer;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.2s ease-in-out;
+        }
 
-#checkbtn:hover {
-    background: var(--accent-hover);
-}
+        #checkbtn:hover {
+            background: var(--accent-hover);
+        }
 
-#checkbtn:active {
-    background: var(--accent-active);
-}
+        #checkbtn:active {
+            background: var(--accent-active);
+        }
 
-#checkbtn::before {
-    content: "Check";
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    transition: opacity 0.3s;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-}
+        #checkbtn::before {
+            content: "Check";
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            transition: opacity 0.3s;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+        }
 
-#checkbtn:hover::before {
-    visibility: visible;
-    opacity: 1;
-}
+        #checkbtn:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
 
-footer {
-    background: var(--text-color);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-</style>
+        footer {
+            background: var(--text-color);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 
-<!-- Custom Script -->
-<script>
-// Mapping of file extensions to Prism language classes
-const languageMap = {
-    // Add all the Prism-supported languages here
-    'js': 'language-javascript',
-    'json': 'language-json',
-    'css': 'language-css',
-    'html': 'language-html',
-    'xml': 'language-xml',
-    'yaml': 'language-yaml',
-    'markdown': 'language-markdown',
-    'bash': 'language-bash',
-    'sql': 'language-sql',
-    'java': 'language-java',
-    'python': 'language-python',
-    'py': 'language-python',
-    'csharp': 'language-csharp',
-    'cpp': 'language-cpp',
-    'go': 'language-go',
-    'rust': 'language-rust',
-    'swift': 'language-swift',
-    'typescript': 'language-typescript',
-    // Add more mappings as needed
-};
+    <!-- Custom Script -->
+    <script>
+        // Mapping of file extensions to Prism language classes
+        const languageMap = {
+            // Add all the Prism-supported languages here
+            'js': 'language-javascript',
+            'json': 'language-json',
+            'css': 'language-css',
+            'html': 'language-html',
+            'xml': 'language-xml',
+            'yaml': 'language-yaml',
+            'markdown': 'language-markdown',
+            'bash': 'language-bash',
+            'sql': 'language-sql',
+            'java': 'language-java',
+            'python': 'language-python',
+            'py': 'language-python',
+            'csharp': 'language-csharp',
+            'cpp': 'language-cpp',
+            'go': 'language-go',
+            'rust': 'language-rust',
+            'swift': 'language-swift',
+            'typescript': 'language-typescript',
+            // Add more mappings as needed
+        };
 
-function getLanguageClassForExtension(extension) {
-    return languageMap[extension.toLowerCase()] || 'language-text';
-}
+        function getLanguageClassForExtension(extension) {
+            return languageMap[extension.toLowerCase()] || 'language-text';
+        }
 
-function openFile(event) {
-    const input = event.target;
-    const reader = new FileReader();
-    reader.onload = function() {
-        const text = reader.result;
-        const fileName = input.files[0].name;
-        const fileExtension = fileName.split('.').pop();
+        function openFile(event) {
+            const input = event.target;
+            const reader = new FileReader();
+            reader.onload = function () {
+                const text = reader.result;
+                const fileName = input.files[0].name;
+                const fileExtension = fileName.split('.').pop();
 
-        const languageClass = getLanguageClassForExtension(fileExtension);
+                const languageClass = getLanguageClassForExtension(fileExtension);
 
-        const codeElement = document.createElement('code');
-        codeElement.className = languageClass;
-        codeElement.textContent = text;
+                const codeElement = document.createElement('code');
+                codeElement.className = languageClass;
+                codeElement.textContent = text;
 
-        const preElement = document.createElement('pre');
-        preElement.appendChild(codeElement);
+                const preElement = document.createElement('pre');
+                preElement.appendChild(codeElement);
 
-        const container = document.querySelector('main');
-        container.appendChild(preElement);
+                const container = document.querySelector('main');
+                container.appendChild(preElement);
 
-        Prism.highlightAll();
-    };
-    reader.readAsText(input.files[0]);
-}
+                Prism.highlightAll();
+            };
+            reader.readAsText(input.files[0]);
+        }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Add event listener for the "Clear File" button
-    const clearBtn = document.getElementById('clearBtn');
-    clearBtn.addEventListener('click', function() {
-        const preElements = document.querySelectorAll('main > pre');
-        preElements.forEach(pre => pre.remove());
-    });
-});
-</script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Add event listener for the "Clear File" button
+            const clearBtn = document.getElementById('clearBtn');
+            clearBtn.addEventListener('click', function () {
+                const preElements = document.querySelectorAll('main > pre');
+                preElements.forEach(pre => pre.remove());
+            });
+        });
+    </script>
 
 </head>
+
 <body>
-<header>
-    <h1>Text Viewer</h1>
-</header>
+    <header>
+        <h1>Text Viewer</h1>
+    </header>
 
-<main>
-    <h2>Choose a file here to view:</h2>
-    <input type='file' id="file" onchange='openFile(event)'/>
-    
-    <button id="clearBtn">Clear File</button>
-</main>
+    <main>
+        <h2>Choose a file here to view:</h2>
+        <input type='file' id="file" onchange='openFile(event)' />
 
-<footer>
-    <p>Text Viewer by Shaokui Wei, <a href="https://shawkui.github.io/" style="color: white;">https://shawkui.github.io</a>, 2024</p>
-</footer>
+        <button id="clearBtn">Clear File</button>
+    </main>
+
+    <script type="text/javascript" id="clustrmaps"
+        src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=CgXNcTnngetrL0Ic-6fP1VQ_yyK1aaSZsr1PV-_sVfY&cl=ffffff&w=a"></script>
+
+    <footer>
+        <p>Text Viewer by Shaokui Wei, <a href="https://shawkui.github.io/"
+                style="color: white;">https://shawkui.github.io</a>, 2024</p>
+    </footer>
 </body>
+
 </html>

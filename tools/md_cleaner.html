@@ -1,144 +1,152 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Markdown Cleaner</title>
-<link rel="icon" href="https://shawkui.github.io/images/favicon-96x96.png?v=M44lzPylqQ" type="image/png">
+    <title>Markdown Cleaner</title>
+    <link rel="icon" href="https://shawkui.github.io/images/favicon-96x96.png?v=M44lzPylqQ" type="image/png">
 
-<style>
-:root {
-    --bg-color: #f5f5f5;
-    --accent-color: #0080ff;
-    --accent-hover: #0066cc;
-    --accent-active: #004d99;
-    --gray-border: #ccc;
-    --dark-bg: #333;
-    --monospace-font: monospace;
-}
+    <style>
+        :root {
+            --bg-color: #f5f5f5;
+            --accent-color: #0080ff;
+            --accent-hover: #0066cc;
+            --accent-active: #004d99;
+            --gray-border: #ccc;
+            --dark-bg: #333;
+            --monospace-font: monospace;
+        }
 
-body {
-    background: var(--bg-color);
-    font-family: var(--monospace-font);
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+        body {
+            background: var(--bg-color);
+            font-family: var(--monospace-font);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
 
-header, footer {
-    background: var(--dark-bg);
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+        header,
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
 
-main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-}
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-textarea {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 800px;
-    height: 500px;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid var(--gray-border);
-    border-radius: 5px;
-    resize: vertical;
-}
+        textarea {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 800px;
+            height: 500px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid var(--gray-border);
+            border-radius: 5px;
+            resize: vertical;
+        }
 
-button {
-    background: var(--accent-color);
-    color: white;
-    cursor: pointer;
-    font-size: 1.5em;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    margin-top: 10px;
-    transition: background 0.2s ease-in-out;
-}
+        button {
+            background: var(--accent-color);
+            color: white;
+            cursor: pointer;
+            font-size: 1.5em;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.2s ease-in-out;
+        }
 
-button:hover {
-    background: var(--accent-hover);
-}
+        button:hover {
+            background: var(--accent-hover);
+        }
 
-button:active {
-    background: var(--accent-active);
-}
+        button:active {
+            background: var(--accent-active);
+        }
 
-button::before {
-    visibility: hidden;
-    width: 120px;
-    background-color: black;
-    color: #fff;
-    text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    transition: opacity 0.3s;
-    position: absolute;
-    z-index: 1;
-    bottom: 100%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    content: "Check";
-}
+        button::before {
+            visibility: hidden;
+            width: 120px;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            transition: opacity 0.3s;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+            opacity: 0;
+            content: "Check";
+        }
 
-button:hover::before {
-    visibility: visible;
-    opacity: 1;
-}
+        button:hover::before {
+            visibility: visible;
+            opacity: 1;
+        }
 
 
-/* Toast Notification Style */
-.toast {
-    position: fixed;
-    top: 20px; /* Change from bottom to top */
-    left: 40%;
-    transform: translateX(-50%); /* Center horizontally */
-    background-color: var(--accent-color);
-    color: white;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    z-index: 1000;
-    animation: fadeInOut 1s forwards;
-}
+        /* Toast Notification Style */
+        .toast {
+            position: fixed;
+            top: 20px;
+            /* Change from bottom to top */
+            left: 40%;
+            transform: translateX(-50%);
+            /* Center horizontally */
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            z-index: 1000;
+            animation: fadeInOut 1s forwards;
+        }
 
-@keyframes fadeInOut {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    20% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    80% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-}
-</style>
+        @keyframes fadeInOut {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            80% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+    </style>
 </head>
+
 <body>
-<header>
-    <h1>Markdown Cleaner</h1>
-</header>
-<main>
-    <div> 
-        <pre>
+    <header>
+        <h1>Markdown Cleaner</h1>
+    </header>
+    <main>
+        <div>
+            <pre>
         Usage:
         * removing all the commented lines
         * removing all the multiple empty lines
@@ -147,197 +155,207 @@ button:hover::before {
         * replacing ' | ' with '|' (for table)
         * replacing multiple - with a single - (for table)
     </pre>
-    </div>
+        </div>
 
-    <h2>Copy/paste or choose a file here to process:</h2>
-    <textarea id="inputMarkdown" placeholder="Paste your Markdown here..."  oninput="updateCharacterCount(this)"></textarea>
-    <p>
-        Character count: <span id="originalCount">0</span><br>
-    </p>    
-    <input type="file" id="file" onchange="handleFileUpload(event)" />
+        <h2>Copy/paste or choose a file here to process:</h2>
+        <textarea id="inputMarkdown" placeholder="Paste your Markdown here..."
+            oninput="updateCharacterCount(this)"></textarea>
+        <p>
+            Character count: <span id="originalCount">0</span><br>
+        </p>
+        <input type="file" id="file" onchange="handleFileUpload(event)" />
 
 
-    <button id="checkbtn" onclick="cleanMarkdown()">Clean Markdown</button>
-    <textarea id="outputMarkdown" placeholder="Output here..."   oninput="updateCharacterCount(this)" rows="10" cols="60" ></textarea>
-    <p>
-        Character count: <span id="cleanedCount">0</span>
-    </p>    
-    <button id="copybtn" onclick="copyMarkdown()">Copy Cleaned Markdown</button>
-    <button id="downloadbtn" onclick="downloadMarkdown()">Download Cleaned Markdown</button>
+        <button id="checkbtn" onclick="cleanMarkdown()">Clean Markdown</button>
+        <textarea id="outputMarkdown" placeholder="Output here..." oninput="updateCharacterCount(this)" rows="10"
+            cols="60"></textarea>
+        <p>
+            Character count: <span id="cleanedCount">0</span>
+        </p>
+        <button id="copybtn" onclick="copyMarkdown()">Copy Cleaned Markdown</button>
+        <button id="downloadbtn" onclick="downloadMarkdown()">Download Cleaned Markdown</button>
 
-</main>
-<footer>
-    <p>Markdown Cleaner by Shaokui Wei, <a href="https://shawkui.github.io/" style="color: white;">https://shawkui.github.io</a>,  2024</p>
-</footer>
+    </main>
 
-<script>
-function handleFileUpload(event) {
-    const input = event.target;
-    const reader = new FileReader();
-    reader.onload = function() {
-        const text = reader.result;
-        document.getElementById('inputMarkdown').value = text;
-        cleanMarkdown();
-    };
-    reader.readAsText(input.files[0]);
-}
 
-function cleanMarkdown() {
-    const input = document.getElementById('inputMarkdown').value;
-    const cleanedMarkdown = cleanMarkdownText(input);
+    <script type="text/javascript" id="clustrmaps"
+        src="//clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=CgXNcTnngetrL0Ic-6fP1VQ_yyK1aaSZsr1PV-_sVfY&cl=ffffff&w=a"></script>
 
-    document.getElementById('outputMarkdown').value = cleanedMarkdown;
-    updateCharacterCounts(input, cleanedMarkdown);
 
-}
+    <footer>
+        <p>Markdown Cleaner by Shaokui Wei, <a href="https://shawkui.github.io/"
+                style="color: white;">https://shawkui.github.io</a>, 2024</p>
+    </footer>
 
-function updateCharacterCounts(originalText, cleanedText) {
-    const originalCountElement = document.getElementById('originalCount');
-    const cleanedCountElement = document.getElementById('cleanedCount');
+    <script>
+        function handleFileUpload(event) {
+            const input = event.target;
+            const reader = new FileReader();
+            reader.onload = function () {
+                const text = reader.result;
+                document.getElementById('inputMarkdown').value = text;
+                cleanMarkdown();
+            };
+            reader.readAsText(input.files[0]);
+        }
 
-    originalCountElement.textContent = originalText.length;
-    cleanedCountElement.textContent = cleanedText.length;
-}
+        function cleanMarkdown() {
+            const input = document.getElementById('inputMarkdown').value;
+            const cleanedMarkdown = cleanMarkdownText(input);
 
-function updateCharacterCount(textarea) {
-    const originalCountElement = document.getElementById('originalCount');
-    originalCountElement.textContent = document.getElementById('inputMarkdown').value.length;
+            document.getElementById('outputMarkdown').value = cleanedMarkdown;
+            updateCharacterCounts(input, cleanedMarkdown);
 
-    const cleanedCountElement = document.getElementById('cleanedCount');
-    cleanedCountElement.textContent = document.getElementById('outputMarkdown').value.length;
-}
+        }
 
-function countChar(str, char) {
-    return str.split('').filter(function(letter) {
-        return letter === char;
-    }).length;
-}
+        function updateCharacterCounts(originalText, cleanedText) {
+            const originalCountElement = document.getElementById('originalCount');
+            const cleanedCountElement = document.getElementById('cleanedCount');
 
-function cleanMarkdownText(text) {
-    // Split the text into lines
-    const lines = text.split('\n');
-    let newLines = [];
-    let inComment = false;
-    let inTable = false;
+            originalCountElement.textContent = originalText.length;
+            cleanedCountElement.textContent = cleanedText.length;
+        }
 
-    // Regular expressions for matching and replacing patterns
-    const regexComment = /<!--(.*?)-->/gs; // Match comments
+        function updateCharacterCount(textarea) {
+            const originalCountElement = document.getElementById('originalCount');
+            originalCountElement.textContent = document.getElementById('inputMarkdown').value.length;
+
+            const cleanedCountElement = document.getElementById('cleanedCount');
+            cleanedCountElement.textContent = document.getElementById('outputMarkdown').value.length;
+        }
+
+        function countChar(str, char) {
+            return str.split('').filter(function (letter) {
+                return letter === char;
+            }).length;
+        }
+
+        function cleanMarkdownText(text) {
+            // Split the text into lines
+            const lines = text.split('\n');
+            let newLines = [];
+            let inComment = false;
+            let inTable = false;
+
+            // Regular expressions for matching and replacing patterns
+            const regexComment = /<!--(.*?)-->/gs; // Match comments
     const regexSpaces = /\s+/g; // Match one or more spaces
-    const regexDashes = /-+/g; // Match one or more dashes
-    const regexLeadingSpaces = /^\s*/; // Match leading spaces
+            const regexDashes = /-+/g; // Match one or more dashes
+            const regexLeadingSpaces = /^\s*/; // Match leading spaces
 
-    let maxSepCount = 0; // Track the maximum number of separators (pipes)
+            let maxSepCount = 0; // Track the maximum number of separators (pipes)
 
-    for (const line of lines) {
-        let trimmedLine = line.trim();
-        let leadingSpaces = line.match(regexLeadingSpaces)[0]; // Get the leading spaces
+            for (const line of lines) {
+                let trimmedLine = line.trim();
+                let leadingSpaces = line.match(regexLeadingSpaces)[0]; // Get the leading spaces
 
-        // Handle multi-line comments
-        if (trimmedLine.includes('<!--')) {
-            if (trimmedLine.includes('-->')) {
-                // Inline comment: remove it
-                trimmedLine = trimmedLine.replace(regexComment, '');
-            } else {
-                // Start of multi-line comment
-                inComment = true;
-                continue;
-            }
-        }
-
-        if (trimmedLine.includes('-->')) {
-            // End of multi-line comment: remove the ending
-            trimmedLine = trimmedLine.replace(/.*?-->/g, '');
-            inComment = false;
-        }
-
-        if (inComment) {
-            // Skip the line if we're inside a comment
-            continue;
-        }
-
-        // Remove consecutive empty lines
-        if (trimmedLine === '' && newLines.length > 0 && newLines[newLines.length - 1] === '') {
-            continue;
-        }
-
-        // Normalize dashes
-        trimmedLine = trimmedLine.replace(regexDashes, '-');
-
-        // Normalize spaces around pipes
-        trimmedLine = trimmedLine.replace(/\| +/g, '|');
-        trimmedLine = trimmedLine.replace(/ +\|/g, '|');
-        // Normalize multiple spaces to single spaces
-        trimmedLine = trimmedLine.replace(regexSpaces, ' ');
-
-        // Count the number of separators (pipes)
-        const sepCount = (trimmedLine.match(/\|/g) || []).length;
-
-        // Detect start of a table
-        if (trimmedLine.startsWith('|') && (newLines.length > 0 && newLines[newLines.length - 1].trim().startsWith('|'))) {
-            inTable = true;
-        }
-
-        // Handle table rows
-        if (inTable) {
-            if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
-                if (maxSepCount === sepCount) {
-                    // Remove outer pipes from the row
-                    trimmedLine = trimmedLine.substring(1, trimmedLine.length - 1);
+                // Handle multi-line comments
+                if (trimmedLine.includes('<!--')) {
+                    if (trimmedLine.includes('-->')) {
+                        // Inline comment: remove it
+                        trimmedLine = trimmedLine.replace(regexComment, '');
+                    } else {
+                        // Start of multi-line comment
+                        inComment = true;
+                        continue;
+                    }
                 }
-            } else {
-                // End of table
-                inTable = false;
+
+                if (trimmedLine.includes('-->')) {
+                    // End of multi-line comment: remove the ending
+                    trimmedLine = trimmedLine.replace(/.*?-->/g, '');
+                    inComment = false;
+                }
+
+                if (inComment) {
+                    // Skip the line if we're inside a comment
+                    continue;
+                }
+
+                // Remove consecutive empty lines
+                if (trimmedLine === '' && newLines.length > 0 && newLines[newLines.length - 1] === '') {
+                    continue;
+                }
+
+                // Normalize dashes
+                trimmedLine = trimmedLine.replace(regexDashes, '-');
+
+                // Normalize spaces around pipes
+                trimmedLine = trimmedLine.replace(/\| +/g, '|');
+                trimmedLine = trimmedLine.replace(/ +\|/g, '|');
+                // Normalize multiple spaces to single spaces
+                trimmedLine = trimmedLine.replace(regexSpaces, ' ');
+
+                // Count the number of separators (pipes)
+                const sepCount = (trimmedLine.match(/\|/g) || []).length;
+
+                // Detect start of a table
+                if (trimmedLine.startsWith('|') && (newLines.length > 0 && newLines[newLines.length - 1].trim().startsWith('|'))) {
+                    inTable = true;
+                }
+
+                // Handle table rows
+                if (inTable) {
+                    if (trimmedLine.startsWith('|') && trimmedLine.endsWith('|')) {
+                        if (maxSepCount === sepCount) {
+                            // Remove outer pipes from the row
+                            trimmedLine = trimmedLine.substring(1, trimmedLine.length - 1);
+                        }
+                    } else {
+                        // End of table
+                        inTable = false;
+                    }
+                }
+
+                // Update the maximum number of separators
+                if (sepCount === 0) {
+                    maxSepCount = 0;
+                } else {
+                    maxSepCount = Math.max(sepCount, maxSepCount);
+                }
+
+                // Add the processed line to the new list
+                newLines.push(leadingSpaces + trimmedLine);
+            }
+
+            // Join the processed lines back into a string
+            return newLines.join('\n');
+        }
+
+        function downloadMarkdown() {
+            const output = document.getElementById('outputMarkdown').value;
+            const blob = new Blob([output], { type: 'text/markdown' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'cleaned-markdown.md';
+            a.click();
+            // Cleanup the created object URL
+            URL.revokeObjectURL(url);
+        }
+
+        async function copyMarkdown() {
+            try {
+                const output = document.getElementById('outputMarkdown').value;
+                await navigator.clipboard.writeText(output);
+                displayToast('Cleaned Markdown has been copied to your clipboard!');
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
             }
         }
 
-        // Update the maximum number of separators
-        if (sepCount === 0) {
-            maxSepCount = 0;
-        } else {
-            maxSepCount = Math.max(sepCount, maxSepCount);
+        function displayToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'toast';
+            toast.textContent = message;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 1000); // Remove the toast after 1 second
         }
 
-        // Add the processed line to the new list
-        newLines.push(leadingSpaces + trimmedLine);
-    }
-
-    // Join the processed lines back into a string
-    return newLines.join('\n');
-}
-
-function downloadMarkdown() {
-    const output = document.getElementById('outputMarkdown').value;
-    const blob = new Blob([output], {type: 'text/markdown'});
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'cleaned-markdown.md';
-    a.click();
-    // Cleanup the created object URL
-    URL.revokeObjectURL(url);
-}
-
-async function copyMarkdown() {
-    try {
-        const output = document.getElementById('outputMarkdown').value;
-        await navigator.clipboard.writeText(output);
-        displayToast('Cleaned Markdown has been copied to your clipboard!');
-    } catch (err) {
-        console.error('Failed to copy text: ', err);
-    }
-}
-
-function displayToast(message) {
-    const toast = document.createElement('div');
-    toast.className = 'toast';
-    toast.textContent = message;
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-        document.body.removeChild(toast);
-    }, 1000); // Remove the toast after 1 second
-}
-
-</script>
+    </script>
 </body>
+
 </html>

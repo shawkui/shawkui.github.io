@@ -79,7 +79,7 @@ Selected Papers
   *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/520425a5a4c2fb7f7fc345078b188201-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/sau.py) | [Website](https://shawkui.github.io/publication/SAU).  
   
 * **Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features.**  
-  *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.  
+  *Authors*: Mingli Zhu * , **Shaokui Wei** * , Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2023.  
   *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/03df5246cc78af497940338dd3eacbaa-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/npd.py) | [Website](https://shawkui.github.io/publication/NPD).  
 

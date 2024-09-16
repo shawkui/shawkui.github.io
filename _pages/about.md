@@ -21,8 +21,6 @@ I am currently exploring opportunities for postdoctoral/research positions in th
 </em>
 </span>
 
-<br>
-
 News
 ======
 ## 2024

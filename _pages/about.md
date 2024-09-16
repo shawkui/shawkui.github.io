@@ -8,11 +8,20 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of **Professor Hongyuan Zha** and **Professor Baoyuan Wu**. Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ.
+I am currently a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of **Professor Hongyuan Zha** and **Professor Baoyuan Wu**. Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ. 
+
 
 Research
 ======
 My research interests mainly lie in AI Security and Fairness, Computer Vision and Optimization, but also include Kernel Methods, Reinforcement Learning, and the application of Machine Learning in economics/marketing.
+
+<span style="color:#4169E1;">
+<em>
+I am currently exploring opportunities for postdoctoral/research positions in the field of machine learning.
+</em>
+</span>
+
+<br>
 
 News
 ======
@@ -48,7 +57,7 @@ News
       </li>
     </ul>
 </details>
-
+<br>
 
 
 

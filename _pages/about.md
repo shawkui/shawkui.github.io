@@ -17,7 +17,7 @@ My research interests mainly lie in AI Security and Fairness, Computer Vision an
 
 <span style="color:#4169E1;">
 <em>
-I am currently exploring opportunities for postdoctoral/research positions in the field of machine learning.
+I am currently seeking opportunities for postdoctoral/research positions in the field of machine learning.
 </em>
 </span>
 

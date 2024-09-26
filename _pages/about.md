@@ -24,6 +24,7 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 News
 ======
 ## 2024
+* [2024-09-26] Two papers get accepted by **NeurIPS 2024**.
 * [2024-08-25] I released some useful tools for academic writing and rebuttal at [here](https://shawkui.github.io/tools/).
 * [2024-05-23] I leave SCLBD, grateful for the invaluable experiences gained.
 * [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
@@ -80,6 +81,13 @@ Patents
 Selected Papers 
 ======
 (*Indicates equal contribution, #Indicates corresponding author)
+* **Mitigating Backdoor Attack by Injecting Proactive Defensive Backdoor.**  
+  *Authors*: **Shaokui Wei**, Hongyuan Zha, Baoyuan Wu.  
+  *Publication*: NeurIPS 2024.  
+  *Links*: [Paper](https://arxiv.org/pdf/2405.16112) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/PDB).  
+
+
+
 * **Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples.**  
   *Authors*: **Shaokui Wei**, Mingda Zhang, Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2023.  
@@ -99,6 +107,12 @@ Selected Papers
   *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  
   *Publication*: NeurIPS 2022 Dataset and Benchmark Track.  
   *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/4491ea1c91aa2b22c373e5f1dfce234f-Paper-Datasets_and_Benchmarks.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
+
+* **Unveiling and Mitigating Backdoor Vulnerabilities based on Unlearning Weight Changes and Backdoor Activeness.**  
+  *Authors*: Weilin Lin, Li Liu, **Shaokui Wei**, Jianze Li, Hui Xiong  
+  *Publication*: NeurIPS 2024.  
+  *Links*: [Paper](https://arxiv.org/pdf/2405.20291) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/TSBD).  
+
 
 * **VDC: Versatile Data Cleanser for Detecting Dirty Samples via Visual-Linguistic Inconsistency.**  
   *Authors*: Zihao Zhu, Mingda Zhang, **Shaokui Wei**, Bingzhe Wu, Baoyuan Wu.  

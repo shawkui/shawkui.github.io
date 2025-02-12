@@ -133,5 +133,23 @@ Selected Papers
   *Links*: [Paper](http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_Enhancing_Fine-Tuning_Based_Backdoor_Defense_with_Sharpness-Aware_Minimization_ICCV_2023_paper.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/ft-sam.py) | [Website](https://shawkui.github.io/publication/FT_SAM).  
 
 
+Selected Preprints
+======
+(*Indicates equal contribution, #Indicates corresponding author)
+* **Revisiting the Auxiliary Data in Backdoor Purification.**  
+  *Authors*: **Shaokui Wei**, Shanchao Yang, Jiayin Liu, Hongyuan Zha.  
+  *Status*: Under review.  
+  *Links*: [Paper](https://arxiv.org/pdf/2502.07231) | [Code](https://github.com/shawkui/BackdoorBenchER) 
+
+* **Backdoor Mitigation by Distance-Driven Detoxification.**  
+  *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
+  *Status*: Under review.  
+  *Links*: [Paper](https://arxiv.org/pdf/2411.09585)
+
+
+* **Defenses in Adversarial Machine Learning: A Survey.**  
+  *Authors*: Baoyuan Wu, **Shaokui Wei**, Mingli Zhu, Meixi Zheng, Zihao Zhu, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.  
+  *Status*: Under review.  
+  *Links*: [Paper](https://arxiv.org/pdf/2405.16112)
 
 

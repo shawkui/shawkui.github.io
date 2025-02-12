@@ -23,6 +23,10 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 
 News
 ======
+## 2025
+* [2025-01-23] One papers get accepted by **ICLR 2025**.
+
+
 ## 2024
 * [2024-09-26] Two papers get accepted by **NeurIPS 2024**.
 * [2024-08-25] I released some useful tools for academic writing and rebuttal at [here](https://shawkui.github.io/tools/).
@@ -86,8 +90,6 @@ Selected Papers
   *Publication*: NeurIPS 2024.  
   *Links*: [Paper](https://arxiv.org/pdf/2405.16112) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/PDB).  
 
-
-
 * **Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples.**  
   *Authors*: **Shaokui Wei**, Mingda Zhang, Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2023.  
@@ -107,6 +109,11 @@ Selected Papers
   *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  
   *Publication*: NeurIPS 2022 Dataset and Benchmark Track.  
   *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/4491ea1c91aa2b22c373e5f1dfce234f-Paper-Datasets_and_Benchmarks.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
+
+* **Activation Gradient based Poisoned Sample Detection Against Backdoor Attacks.**  
+  *Authors*: Danni Yuan, **Shaokui Wei**, Mingda Zhang, Li Liu, Baoyuan Wu.  
+  *Publication*: ICLR 2025.  
+  *Links*: [Paper](https://arxiv.org/pdf/2312.06230) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/detection_pretrain/agpd.py) | [Website]().  
 
 * **Unveiling and Mitigating Backdoor Vulnerabilities based on Unlearning Weight Changes and Backdoor Activeness.**  
   *Authors*: Weilin Lin, Li Liu, **Shaokui Wei**, Jianze Li, Hui Xiong  

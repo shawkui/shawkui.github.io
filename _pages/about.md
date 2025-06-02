@@ -26,6 +26,7 @@ News
 ## 2025
 * [2025-05-29] I was selected as Top Reviewer of ICML 2025.
 * [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.
+* [2025-03-29] Our second version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning", is accepted to **IJCV 2025**. 
 * [2025-01-23] One papers get accepted by **ICLR 2025**.
 
 
@@ -106,6 +107,12 @@ Selected Papers
   *Authors*: **Shaokui Wei**, Jiayin Liu, Bing Li, Hongyuan Zha.  
   *Publication*: AISTATS 2023.  
   *Links*: [Paper](https://proceedings.mlr.press/v206/wei23a/wei23a.pdf) | [Code](https://github.com/shawkui/MP_Fair_Regression) | [Website](https://shawkui.github.io/publication/MP_fair).
+
+* **BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning.**  
+  *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Mingli Zhu, Ruotong Wang, Li Liu, Chao Shen.
+  *Publication*:  International Journal of Computer Vision 2025.  
+  *Links*: [Paper](https://link.springer.com/article/10.1007/s11263-025-02447-x) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
+
 
 * **Backdoorbench: A comprehensive benchmark of backdoor learning.**  
   *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  

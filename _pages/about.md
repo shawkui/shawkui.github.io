@@ -156,7 +156,7 @@ Selected Preprints
   *Links*: [Paper](https://arxiv.org/pdf/2411.09585)
 
 * **Class-Conditional Neural Polarizer: A Lightweight and Effective Backdoor Defense by Purifying Poisoned Features.**  
-  *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.
+  *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.  
   *Status*: Under review.  
   *Links*: [Paper](https://arxiv.org/pdf/2502.18520)
 

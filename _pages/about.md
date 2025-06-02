@@ -155,10 +155,15 @@ Selected Preprints
   *Status*: Under review.  
   *Links*: [Paper](https://arxiv.org/pdf/2411.09585)
 
+* **Class-Conditional Neural Polarizer: A Lightweight and Effective Backdoor Defense by Purifying Poisoned Features.**  
+  *Authors*: Mingli Zhu, **Shaokui Wei**, Hongyuan Zha, Baoyuan Wu.
+  *Status*: Under review.  
+  *Links*: [Paper](https://arxiv.org/pdf/2502.18520)
 
 * **Defenses in Adversarial Machine Learning: A Survey.**  
   *Authors*: Baoyuan Wu, **Shaokui Wei**, Mingli Zhu, Meixi Zheng, Zihao Zhu, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.  
-  *Status*: Under review.  
+  *Status*: Under review (Major Revision).  
   *Links*: [Paper](https://arxiv.org/pdf/2405.16112)
+
 
 

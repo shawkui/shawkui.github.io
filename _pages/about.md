@@ -24,7 +24,8 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 News
 ======
 ## 2025
-* [2025-05-29] I was selected as Top Reviewer of ICML 2025.
+* [2025-06-26] One paper gets accepted by **ICCV 2025**.
+* [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
 * [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.
 * [2025-03-29] Our second version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning", is accepted to **IJCV 2025**. 
 * [2025-01-23] One papers get accepted by **ICLR 2025**.
@@ -88,6 +89,12 @@ Patents
 Selected Papers 
 ======
 (*Indicates equal contribution, #Indicates corresponding author)
+* **Backdoor Mitigation by Distance-Driven Detoxification.**  
+  *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
+  *Publication*: ICCV 2025.  
+  *Links*: [Paper](https://arxiv.org/abs/2411.09585) | [Code]() | [Website]().  
+
+
 * **Mitigating Backdoor Attack by Injecting Proactive Defensive Backdoor.**  
   *Authors*: **Shaokui Wei**, Hongyuan Zha, Baoyuan Wu.  
   *Publication*: NeurIPS 2024.  
@@ -149,11 +156,6 @@ Selected Preprints
   *Authors*: **Shaokui Wei**, Shanchao Yang, Jiayin Liu, Hongyuan Zha.  
   *Status*: Under review.  
   *Links*: [Paper](https://arxiv.org/pdf/2502.07231) | [Code](https://github.com/shawkui/BackdoorBenchER) 
-
-* **Backdoor Mitigation by Distance-Driven Detoxification.**  
-  *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
-  *Status*: Under review.  
-  *Links*: [Paper](https://arxiv.org/pdf/2411.09585)
 
 * **Class-Conditional Neural Polarizer: A Lightweight and Effective Backdoor Defense by Purifying Poisoned Features.**  
   *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.  

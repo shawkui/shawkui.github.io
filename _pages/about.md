@@ -24,7 +24,7 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 News
 ======
 ## 2025
-* [2025-06-26] One paper gets accepted by **ICCV 2025**.
+* [2025-06-26] One paper gets accepted by **ICCV 2025** as **Highlight** paper (Top 5%).
 * [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
 * [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.
 * [2025-03-29] Our second version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning", is accepted to **IJCV 2025**. 
@@ -91,7 +91,7 @@ Selected Papers
 (*Indicates equal contribution, #Indicates corresponding author)
 * **Backdoor Mitigation by Distance-Driven Detoxification.**  
   *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
-  *Publication*: ICCV 2025.  
+  *Publication*: ICCV 2025 (Highlight, Top 5%).  
   *Links*: [Paper](https://arxiv.org/abs/2411.09585) | [Code]() | [Website]().  
 
 

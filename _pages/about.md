@@ -24,6 +24,7 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 News
 ======
 ## 2025
+* [2025-09-02] One paper gets accepted by **Neural Networks**.
 * [2025-06-26] One paper gets accepted by **ICCV 2025** as **Highlight** paper (Top 5%).
 * [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
 * [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.

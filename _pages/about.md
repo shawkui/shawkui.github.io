@@ -24,6 +24,7 @@ I am currently seeking opportunities for postdoctoral/research positions in the 
 News
 ======
 ## 2025
+* [2025-09-10] Our survey gets accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI)**.
 * [2025-09-02] One paper gets accepted by **Neural Networks**.
 * [2025-06-26] One paper gets accepted by **ICCV 2025** as **Highlight** paper (Top 5%).
 * [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
@@ -163,10 +164,7 @@ Selected Preprints
   *Status*: Under review.  
   *Links*: [Paper](https://arxiv.org/pdf/2502.18520)
 
-* **Defenses in Adversarial Machine Learning: A Survey.**  
-  *Authors*: Baoyuan Wu, **Shaokui Wei**, Mingli Zhu, Meixi Zheng, Zihao Zhu, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.  
-  *Status*: Under review (Major Revision).  
-  *Links*: [Paper](https://arxiv.org/pdf/2405.16112)
+
 
 
 

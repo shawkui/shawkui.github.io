@@ -134,7 +134,7 @@ Selected Papers
   *Links*: [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0893608025009542) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
 
 * **Defenses in Adversarial Machine Learning: a Systematic Survey from the Lifecycle Perspective.**  
-  *Authors*: Baoyuan Wu, Mingli Zhu, Meixi Zheng, Zihao Zhu, \textbf{Shaokui Wei}, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu. 
+  *Authors*: Baoyuan Wu, Mingli Zhu, Meixi Zheng, Zihao Zhu, **Shaokui Wei**, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.
   *Publication*: IEEE Transactions on Pattern Analysis and Machine Intelligence 2025.  
   *Links*: [Paper](https://ieeexplore.ieee.org/document/11169420) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
 

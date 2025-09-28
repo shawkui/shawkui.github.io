@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). During 2021.9-2024.5, I also worked with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ. 
+I am currently visiting The University of Texas at Dallas. Before that, I am a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). During 2021.9-2024.5, I also worked with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ. 
 
 
 Research
@@ -127,6 +127,17 @@ Selected Papers
   *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  
   *Publication*: NeurIPS 2022 Dataset and Benchmark Track.  
   *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/4491ea1c91aa2b22c373e5f1dfce234f-Paper-Datasets_and_Benchmarks.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
+
+* **WPDA: frequency-based backdoor attack with wavelet packet decomposition.**  
+  *Authors*: Zhengyao Song, Yongqiang Li, Danni Yuan, Li Liu, **Shaokui Wei**, Baoyuan Wu.  
+  *Publication*: Neural Networks 2026.  
+  *Links*: [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0893608025009542) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
+
+* **Defenses in Adversarial Machine Learning: a Systematic Survey from the Lifecycle Perspective.**  
+  *Authors*: Baoyuan Wu, Mingli Zhu, Meixi Zheng, Zihao Zhu, \textbf{Shaokui Wei}, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu. 
+  *Publication*: IEEE Transactions on Pattern Analysis and Machine Intelligence 2025.  
+  *Links*: [Paper](https://ieeexplore.ieee.org/document/11169420) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
+
 
 * **Activation Gradient based Poisoned Sample Detection Against Backdoor Attacks.**  
   *Authors*: Danni Yuan, **Shaokui Wei**, Mingda Zhang, Li Liu, Baoyuan Wu.  

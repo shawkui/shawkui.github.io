@@ -18,7 +18,6 @@ My research interests mainly lie in AI Security and Fairness, Computer Vision an
 <em>
 I am currently seeking opportunities for academic collaboration. If you find my research interests aligned with yours—be it in AI Security, Fairness, Computer Vision, or interdisciplinary applications—I would be delighted to connect and explore potential joint projects.
 </em>
-
 </span>
 
 News

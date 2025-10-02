@@ -8,8 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am currently visiting The University of Texas at Dallas. Before that, I am a Ph.D. candidate in the School of Data Science (SDS), the Chinese University of Hong Kong, Shenzhen (CUHKSZ) under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). During 2021.9-2024.5, I also worked with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). Previously, I received my Bachelor's degree (rank No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering (SSE), CUHKSZ. 
-
+I am an incoming **Assistant Professor** at the *School of Computing and Artificial Intelligence*, **Shanghai University of Finance and Economics**. Currently, I am visiting **The University of Texas at Dallas**. Previously, I was a Ph.D. candidate at the *School of Data Science*, **The Chinese University of Hong Kong, Shenzhen (CUHKSZ)**, under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From **September 2021 to May 2024**, I also collaborated with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). I received my Bachelor's degree (ranked **No.1**, *first-class honor*) in **Electronic Information Engineering** from the *School of Science and Engineering*, CUHKSZ.
 
 Research
 ======
@@ -17,8 +16,9 @@ My research interests mainly lie in AI Security and Fairness, Computer Vision an
 
 <span style="color:#4169E1;">
 <em>
-I am currently seeking opportunities for postdoctoral/research positions in the field of machine learning.
+I am currently seeking opportunities for academic collaboration. If you find my research interests aligned with yours—be it in AI Security, Fairness, Computer Vision, or interdisciplinary applications—I would be delighted to connect and explore potential joint projects.
 </em>
+
 </span>
 
 News

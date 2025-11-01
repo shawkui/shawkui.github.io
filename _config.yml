@@ -10,7 +10,7 @@ locale                   : "en-US"
 title                    : "Shaokui Wei"
 title_separator          : "-"
 name                     : &name "Shaokui Wei"
-description              : &description "Ph.D. Candidate in CUHK(SZ)"
+description              : &description "Doctor"
 url                      : "https://shawkui.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "shawkui/shawkui.github.io"
@@ -82,7 +82,7 @@ analytics:
 author:
   name             : "Shaokui Wei"
   avatar           : "shaokui.jpg"
-  bio              : "Ph.D. Candidate in CUHK(SZ)"
+  bio              : "Doctor"
   location         : "Shenzhen, China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"

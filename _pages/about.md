@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am an incoming **Assistant Professor** at the *School of Computing and Artificial Intelligence*, **Shanghai University of Finance and Economics**. Currently, I am visiting **The University of Texas at Dallas**. Previously, I was a Ph.D. candidate at the *School of Data Science*, **The Chinese University of Hong Kong, Shenzhen (CUHKSZ)**, under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From **September 2021 to May 2024**, I also collaborated with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). I received my Bachelor's degree (ranked **No.1**, *first-class honor*) in **Electronic Information Engineering** from the *School of Science and Engineering*, CUHKSZ.
+I am Shaokui WEI (魏少魁), an incoming **Assistant Professor** at the *School of Computing and Artificial Intelligence*, **Shanghai University of Finance and Economics**. Currently, I am visiting **The University of Texas at Dallas**. Previously, I was a Ph.D. candidate at the *School of Data Science*, **The Chinese University of Hong Kong, Shenzhen (CUHKSZ)**, under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From **September 2021 to May 2024**, I also collaborated with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). I received my Bachelor's degree (ranked **No.1**, *first-class honor*) in **Electronic Information Engineering** from the *School of Science and Engineering*, CUHKSZ.
 
 Research
 ======

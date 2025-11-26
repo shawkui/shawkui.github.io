@@ -8,7 +8,18 @@ redirect_from:
   - /about.html
 ---
 
-I am Shaokui WEI (魏少魁), an incoming **Assistant Professor** at the *School of Computing and Artificial Intelligence*, **Shanghai University of Finance and Economics**. Currently, I am visiting **The University of Texas at Dallas**. Previously, I was a Ph.D. candidate at the *School of Data Science*, **The Chinese University of Hong Kong, Shenzhen (CUHKSZ)**, under the supervision of [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From **September 2021 to May 2024**, I also collaborated with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/). I received my Bachelor's degree (ranked **No.1**, *first-class honor*) in **Electronic Information Engineering** from the *School of Science and Engineering*, CUHKSZ.
+👋 Hello! I'm Shaokui Wei (魏少魁).
+
+I am an incoming Assistant Professor at the Shanghai University of Finance and Economics, specifically within the School of Computing and Artificial Intelligence. My work is dedicated to exploring the frontiers of Trustworthy AI—focusing on developing robust, fair, and interpretable machine learning systems that we can truly rely on.
+
+💡My Academic Journey:
+
+I'm currently a visiting researcher at The University of Texas at Dallas, deepening my collaborative research.
+
+I obtained my Ph.D. degree in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHKSZ), under the supervision of Professor [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From September 2021 to May 2024, I also had the valuable opportunity to collaborate with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/) on related projects.
+
+
+Prior to my doctoral studies, I received my Bachelor's degree (ranked No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering, CUHKSZ.
 
 Research
 ======

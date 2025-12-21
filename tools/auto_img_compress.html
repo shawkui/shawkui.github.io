@@ -48,7 +48,7 @@
         .tool-card {
             background: white;
             width: 100%;
-            max-width: 850px;
+            max-width: 900px;
             padding: 30px;
             border: 1px solid var(--border-color);
             border-radius: 8px;
@@ -58,14 +58,14 @@
         .config-section {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 20px;
+            gap: 15px;
             margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px dashed var(--border-color);
         }
 
         .input-group { display: flex; flex-direction: column; gap: 8px; }
-        .input-group label { font-weight: bold; font-size: 0.9em; }
+        .input-group label { font-weight: bold; font-size: 0.85em; }
 
         input[type="number"], select, input[type="file"] {
             padding: 8px;
@@ -90,7 +90,6 @@
         .btn:hover { background: var(--accent-hover); }
         .btn:disabled { background: #ccc; cursor: not-allowed; }
 
-        /* Report Table */
         #report {
             margin-top: 30px;
             width: 100%;
@@ -112,18 +111,20 @@
         .download-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
         #batch-download-btn { margin-top: 20px; background: var(--success-color); display: none; }
 
-        /* Instructions Section */
+        /* Usage Instructions Section */
         .instructions {
             margin-top: 40px;
-            padding: 20px;
+            padding: 25px;
             background: #fafafa;
             border: 1px solid #eee;
             border-radius: 8px;
             font-size: 0.9em;
         }
         .instructions h3 { margin-top: 0; color: var(--accent-color); border-bottom: 1px solid #ddd; padding-bottom: 5px; }
-        .instructions ul { padding-left: 20px; line-height: 1.6; }
-        .instructions li { margin-bottom: 10px; }
+        .instructions ul { padding-left: 20px; line-height: 1.7; }
+        .instructions li { margin-bottom: 12px; }
+        .instructions code { background: #eee; padding: 2px 4px; border-radius: 3px; }
+
         .note { color: #666; font-size: 0.85em; border-left: 3px solid var(--accent-color); padding-left: 10px; margin-top: 15px; }
 
         footer a { color: white; text-decoration: underline; }
@@ -143,6 +144,10 @@
                     <input type="number" id="targetSize" value="512" min="1">
                 </div>
                 <div class="input-group">
+                    <label>Max Iterations</label>
+                    <input type="number" id="maxIter" value="10" min="1" max="30" title="Higher = more precise file size">
+                </div>
+                <div class="input-group">
                     <label>Strategy</label>
                     <select id="strategyMode">
                         <option value="auto">Smart Heuristic</option>
@@ -150,11 +155,11 @@
                     </select>
                 </div>
                 <div class="input-group" id="manualQualityGroup" style="display:none;">
-                    <label>Initial Quality (0.1-1.0)</label>
-                    <input type="number" id="manualQuality" value="0.9" step="0.1" min="0.1" max="1.0">
+                    <label>Initial Quality</label>
+                    <input type="number" id="manualQuality" value="0.95" step="0.05" min="0.1" max="1.0">
                 </div>
                 <div class="input-group">
-                    <label>Select Images</label>
+                    <label>Upload Images</label>
                     <input type="file" id="fileInput" accept="image/jpeg,image/png" multiple>
                 </div>
             </div>
@@ -174,22 +179,25 @@
                 <tbody id="fileList"></tbody>
             </table>
 
-            <button id="batch-download-btn" class="btn" onclick="downloadAll()">Download All Compressed Images</button>
+            <button id="batch-download-btn" class="btn" onclick="downloadAll()">Download All Results</button>
 
             <div class="instructions">
-                <h3>How to Use</h3>
+                <h3>User Instructions</h3>
                 <ul>
-                    <li><strong>1. Upload:</strong> Click "Select Images" to choose one or more JPG/PNG files from your device.</li>
-                    <li><strong>2. Set Target:</strong> Input your desired file size in <strong>KB</strong> (e.g., 512). The tool will attempt to get as close as possible to this limit without exceeding it significantly.</li>
-                    <li><strong>3. Choose Strategy:</strong> 
-                        <br>• <em>Smart Heuristic:</em> Automatically detects image density to preserve maximum quality.
-                        <br>• <em>Manual Start:</em> Allows you to define the starting quality point for the compression algorithm.
+                    <li><strong>1. Selection:</strong> Choose one or multiple JPG/PNG images. Files are processed locally and never uploaded to any server.</li>
+                    <li><strong>2. Set Target:</strong> Enter your maximum file size in <code>KB</code>. The algorithm targets a result as close to this number as possible without exceeding it.</li>
+                    <li><strong>3. Max Iterations:</strong>
+                        <br>• <code>8-10</code>: Standard speed. Good for general use.
+                        <br>• <code>15-20</code>: High precision. Best for hitting exact targets (e.g., getting a 6MB file down to exactly 511KB).
                     </li>
-                    <li><strong>4. Compress:</strong> Click the "Compress Images" button. The tool uses a <strong>binary search algorithm</strong> to iteratively find the perfect balance between size and quality.</li>
-                    <li><strong>5. Download:</strong> Save files individually from the table or use the green button to save all results at once.</li>
+                    <li><strong>4. Strategy:</strong>
+                        <br>• <code>Smart Heuristic</code>: Automatically calculates the starting quality based on the original-to-target ratio to save time and detail.
+                        <br>• <code>Manual Start</code>: Forces the search to begin at a specific quality level.
+                    </li>
+                    <li><strong>5. How it Works:</strong> The tool uses a <strong>Double Binary Search</strong>. It first adjusts image quality. If the target size is still not met even at low quality, it performs a second search to find the optimal dimension scale.</li>
                 </ul>
                 <div class="note">
-                    <strong>Privacy Notice:</strong> This is a 100% Client-Side tool. Your images are processed entirely within your browser's memory. No data is uploaded to any server.
+                    <strong>Privacy & Tech:</strong> 100% Client-Side. Your data privacy is guaranteed as the processing happens entirely within your browser's memory using the Canvas API.
                 </div>
             </div>
         </div>
@@ -206,9 +214,9 @@
     </footer>
 
     <script>
-        // JS remains the same as previous functional version
         const fileInput = document.getElementById('fileInput');
         const targetSizeInput = document.getElementById('targetSize');
+        const maxIterInput = document.getElementById('maxIter');
         const strategyMode = document.getElementById('strategyMode');
         const manualQualityGroup = document.getElementById('manualQualityGroup');
         const processBtn = document.getElementById('processBtn');
@@ -225,6 +233,7 @@
         processBtn.onclick = async () => {
             const files = Array.from(fileInput.files);
             const targetKB = parseFloat(targetSizeInput.value);
+            const iterations = parseInt(maxIterInput.value) || 10;
             if (!files.length) return alert('Please select images first.');
 
             fileList.innerHTML = '';
@@ -244,13 +253,14 @@
                     downloadQueue.push({url, name: file.name});
                 } else {
                     try {
-                        const blob = await smartCompress(file, targetKB, originalKB);
+                        const blob = await preciseCompress(file, targetKB, originalKB, iterations);
                         const url = URL.createObjectURL(blob);
                         const finalKB = (blob.size / 1024).toFixed(1);
                         const newName = `compressed_${Math.round(finalKB)}kb_${file.name}`;
                         updateRow(row, url, `${finalKB} KB`, 'Compressed', 'status-done', newName);
                         downloadQueue.push({url, name: newName});
                     } catch (e) {
+                        console.error(e);
                         updateRow(row, null, '-', 'Error', 'status-skip', '');
                     }
                 }
@@ -259,50 +269,56 @@
             if (downloadQueue.length > 0) batchBtn.style.display = 'block';
         };
 
-        async function smartCompress(file, targetKB, originalKB) {
+        async function preciseCompress(file, targetKB, originalKB, iterations) {
             const bitmap = await createImageBitmap(file);
-            let startQ = 0.95;
+            let startQ = 0.98;
+
             if (strategyMode.value === 'manual') {
-                startQ = parseFloat(document.getElementById('manualQuality').value) || 0.9;
+                startQ = parseFloat(document.getElementById('manualQuality').value) || 0.95;
             } else {
                 const ratio = targetKB / originalKB;
                 if (ratio > 0.9) startQ = 0.98;
-                else if (ratio > 0.7) startQ = 0.92;
-                else if (ratio < 0.2) startQ = 0.5;
+                else if (ratio > 0.7) startQ = 0.95;
+                else if (ratio < 0.2) startQ = 0.6;
             }
-            let bestBlob = await canvasToBlob(bitmap, startQ, 1.0);
-            if (bestBlob.size / 1024 <= targetKB) return bestBlob;
 
-            let low = 0.05, high = startQ;
-            for (let i = 0; i < 6; i++) {
-                let mid = (low + high) / 2;
-                let blob = await canvasToBlob(bitmap, mid, 1.0);
+            let bestBlob = null;
+            
+            // Phase 1: Quality Binary Search
+            let lowQ = 0.01, highQ = startQ;
+            for (let i = 0; i < iterations; i++) {
+                let midQ = (lowQ + highQ) / 2;
+                let blob = await canvasToBlob(bitmap, midQ, 1.0);
                 if (blob.size / 1024 <= targetKB) {
                     bestBlob = blob;
-                    low = mid;
+                    lowQ = midQ; 
                 } else {
-                    high = mid;
+                    highQ = midQ;
                 }
             }
-            if (bestBlob.size / 1024 > targetKB * 1.05) {
-                let scale = 0.9;
-                while (scale > 0.1) {
-                    const blob = await canvasToBlob(bitmap, 0.7, scale);
+
+            // Phase 2: Scaling Binary Search (If lowest quality still exceeds target)
+            if (!bestBlob) {
+                let lowS = 0.05, highS = 1.0;
+                for (let i = 0; i < iterations; i++) {
+                    let midS = (lowS + highS) / 2;
+                    let blob = await canvasToBlob(bitmap, 0.7, midS); 
                     if (blob.size / 1024 <= targetKB) {
                         bestBlob = blob;
-                        break;
+                        lowS = midS; 
+                    } else {
+                        highS = midS;
                     }
-                    scale -= 0.1;
                 }
             }
-            return bestBlob;
+            return bestBlob || await canvasToBlob(bitmap, 0.1, 0.1);
         }
 
         function canvasToBlob(bitmap, quality, scale) {
             return new Promise(resolve => {
                 const canvas = document.createElement('canvas');
-                canvas.width = Math.floor(bitmap.width * scale);
-                canvas.height = Math.floor(bitmap.height * scale);
+                canvas.width = Math.max(1, Math.floor(bitmap.width * scale));
+                canvas.height = Math.max(1, Math.floor(bitmap.height * scale));
                 const ctx = canvas.getContext('2d');
                 ctx.imageSmoothingQuality = 'high';
                 ctx.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
@@ -316,7 +332,7 @@
                 <td>${file.name}</td>
                 <td>${(file.size / 1024).toFixed(1)} KB</td>
                 <td class="res-size">-</td>
-                <td><span class="status-badge status-working">Processing...</span></td>
+                <td><span class="status-badge status-working">Working...</span></td>
                 <td class="res-action">-</td>
             `;
             return tr;

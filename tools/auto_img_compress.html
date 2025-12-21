@@ -33,9 +33,25 @@
             color: white;
             padding: 15px;
             text-align: center;
+            position: relative;
         }
 
         header h1 { margin: 0; font-size: 1.8em; }
+
+        #lang-toggle {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 5px 12px;
+            background: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: monospace;
+        }
+        #lang-toggle:hover { background: rgba(255,255,255,0.2); }
 
         main {
             flex: 1;
@@ -111,7 +127,6 @@
         .download-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
         #batch-download-btn { margin-top: 20px; background: var(--success-color); display: none; }
 
-        /* Usage Instructions Section */
         .instructions {
             margin-top: 40px;
             padding: 25px;
@@ -133,87 +148,107 @@
 
 <body>
     <header>
-        <h1>Image Compressor</h1>
+        <h1 data-en="Image Compressor" data-zh="图片自动压缩器">Image Compressor</h1>
+        <button id="lang-toggle">中文</button>
     </header>
 
     <main>
         <div class="tool-card">
             <div class="config-section">
                 <div class="input-group">
-                    <label>Target Size (KB)</label>
+                    <label data-en="Target Size (KB)" data-zh="目标大小 (KB)">Target Size (KB)</label>
                     <input type="number" id="targetSize" value="512" min="1">
                 </div>
                 <div class="input-group">
-                    <label>Max Iterations</label>
+                    <label data-en="Max Iterations" data-zh="最大迭代次数">Max Iterations</label>
                     <input type="number" id="maxIter" value="10" min="1" max="30" title="Higher = more precise file size">
                 </div>
                 <div class="input-group">
-                    <label>Strategy</label>
+                    <label data-en="Strategy" data-zh="压缩策略">Strategy</label>
                     <select id="strategyMode">
-                        <option value="auto">Smart Heuristic</option>
-                        <option value="manual">Manual Start</option>
+                        <option value="auto" data-en="Smart Heuristic" data-zh="智能启发式">Smart Heuristic</option>
+                        <option value="manual" data-en="Manual Start" data-zh="手动起始值">Manual Start</option>
                     </select>
                 </div>
                 <div class="input-group" id="manualQualityGroup" style="display:none;">
-                    <label>Initial Quality</label>
+                    <label data-en="Initial Quality" data-zh="初始质量">Initial Quality</label>
                     <input type="number" id="manualQuality" value="0.95" step="0.05" min="0.1" max="1.0">
                 </div>
                 <div class="input-group">
-                    <label>Upload Images</label>
+                    <label data-en="Upload Images" data-zh="上传图片">Upload Images</label>
                     <input type="file" id="fileInput" accept="image/jpeg,image/png" multiple>
                 </div>
             </div>
 
-            <button id="processBtn" class="btn">Compress Images</button>
+            <button id="processBtn" class="btn" data-en="Compress Images" data-zh="开始压缩图片">Compress Images</button>
 
             <table id="report" style="display: none;">
                 <thead>
                     <tr>
-                        <th>Filename</th>
-                        <th>Original</th>
-                        <th>Result</th>
-                        <th>Status</th>
-                        <th>Action</th>
+                        <th data-en="Filename" data-zh="文件名">Filename</th>
+                        <th data-en="Original" data-zh="原始大小">Original</th>
+                        <th data-en="Result" data-zh="压缩后">Result</th>
+                        <th data-en="Status" data-zh="状态">Status</th>
+                        <th data-en="Action" data-zh="操作">Action</th>
                     </tr>
                 </thead>
                 <tbody id="fileList"></tbody>
             </table>
 
-            <button id="batch-download-btn" class="btn" onclick="downloadAll()">Download All Results</button>
+            <button id="batch-download-btn" class="btn" onclick="downloadAll()" data-en="Download All Results" data-zh="下载全部压缩结果">Download All Results</button>
 
             <div class="instructions">
-                <h3>User Instructions</h3>
-                <ul>
-                    <li><strong>1. Selection:</strong> Choose one or multiple JPG/PNG images. Files are processed locally and never uploaded to any server.</li>
-                    <li><strong>2. Set Target:</strong> Enter your maximum file size in <code>KB</code>. The algorithm targets a result as close to this number as possible without exceeding it.</li>
-                    <li><strong>3. Max Iterations:</strong>
-                        <br>• <code>8-10</code>: Standard speed. Good for general use.
-                        <br>• <code>15-20</code>: High precision. Best for hitting exact targets (e.g., getting a 6MB file down to exactly 511KB).
-                    </li>
-                    <li><strong>4. Strategy:</strong>
-                        <br>• <code>Smart Heuristic</code>: Automatically calculates the starting quality based on the original-to-target ratio to save time and detail.
-                        <br>• <code>Manual Start</code>: Forces the search to begin at a specific quality level.
-                    </li>
-                    <li><strong>5. How it Works:</strong> The tool uses a <strong>Double Binary Search</strong>. It first adjusts image quality. If the target size is still not met even at low quality, it performs a second search to find the optimal dimension scale.</li>
-                </ul>
+                <h3 data-en="User Instructions" data-zh="使用说明">User Instructions</h3>
+                <div id="instruction-content">
+                    <div class="lang-en">
+                        <ul>
+                            <li><strong>1. Selection:</strong> Choose one or multiple JPG/PNG images. Files are processed locally and never uploaded to any server.</li>
+                            <li><strong>2. Set Target:</strong> Enter your maximum file size in <code>KB</code>. The algorithm targets a result as close to this number as possible without exceeding it.</li>
+                            <li><strong>3. Max Iterations:</strong>
+                                <br>• <code>8-10</code>: Standard speed. Good for general use.
+                                <br>• <code>15-20</code>: High precision. Best for hitting exact targets (e.g., getting a 6MB file down to exactly 511KB).
+                            </li>
+                            <li><strong>4. Strategy:</strong>
+                                <br>• <code>Smart Heuristic</code>: Automatically calculates the starting quality based on the original-to-target ratio to save time and detail.
+                                <br>• <code>Manual Start</code>: Forces the search to begin at a specific quality level.
+                                <br>• <strong>Suggestion:</strong> Set quality <code>&lt; 1.0</code>. A higher value (e.g., 0.99) offers better precision but requires more <code>Iterations</code> to converge.
+                            </li>
+                            <li><strong>5. How it Works:</strong> The tool uses a <strong>Double Binary Search</strong>. It first adjusts image quality. If the target size is still not met even at low quality, it performs a second search to find the optimal dimension scale.</li>
+                        </ul>
+                    </div>
+                    <div class="lang-zh" style="display:none;">
+                        <ul>
+                            <li><strong>1. 选择图片:</strong> 选择一个或多个 JPG/PNG 图片。文件在本地处理，绝不会上传到服务器。</li>
+                            <li><strong>2. 设定目标:</strong> 输入最大文件大小（单位 <code>KB</code>）。算法会尽可能接近此数值且不超过它。</li>
+                            <li><strong>3. 最大迭代次数:</strong>
+                                <br>• <code>8-10</code>: 标准速度，适合日常使用。
+                                <br>• <code>15-20</code>: 高精度，适合追求极度精准的文件大小。
+                            </li>
+                            <li><strong>4. 压缩策略:</strong>
+                                <br>• <code>智能启发式</code>: 根据原图比例自动计算起始质量，平衡速度与画质。
+                                <br>• <code>手动起始值</code>: 强制从特定的质量等级开始搜索。
+                                <br>• <strong>建议:</strong> 设定值应 <code>&lt; 1.0</code>。数值越大精度越高，但需要配合更高的 <code>迭代次数</code> 才能完成搜索。
+                            </li>
+                            <li><strong>5. 技术原理:</strong> 采用 <strong>双重二分查找算法</strong>。首先调整图片质量；如果最低质量仍超标，则进行第二次搜索以寻找最佳缩放比例。</li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="note">
-                    <strong>Privacy & Tech:</strong> 100% Client-Side. Your data privacy is guaranteed as the processing happens entirely within your browser's memory using the Canvas API.
+                    <strong data-en="Privacy & Tech:" data-zh="隐私与技术：">Privacy & Tech:</strong> 
+                    <span data-en="100% Client-Side. Your data privacy is guaranteed as the processing happens entirely within your browser's memory using the Canvas API." 
+                          data-zh="100% 客户端处理。通过 Canvas API 在浏览器内存中完成，保证您的数据隐私。">100% Client-Side. Your data privacy is guaranteed...</span>
                 </div>
             </div>
         </div>
     </main>
 
-    <div class="clustrmap" style="width: 300pt; margin: 20px auto;">
-        <h2 style="text-align: center; font-size: 1em;">Visitor Map</h2>
-        <script type="text/javascript" id="clustrmaps"
-            src="//clustrmaps.com/map_v2.js?d=CgXNcTnngetrL0Ic-6fP1VQ_yyK1aaSZsr1PV-_sVfY&cl=ffffff&w=a"></script>
-    </div>
-
     <footer>
-        <p>Image Compressor by Shaokui Wei, <a href="https://shawkui.github.io/">https://shawkui.github.io</a>, 2024</p>
+        <p data-en="Image Compressor by Shaokui Wei" data-zh="图片自动压缩器 - 魏少奎">Image Compressor by Shaokui Wei</p>
+        <p><a href="https://shawkui.github.io/">https://shawkui.github.io</a>, 2024</p>
     </footer>
 
     <script>
+        // 保持原本的逻辑脚本
         const fileInput = document.getElementById('fileInput');
         const targetSizeInput = document.getElementById('targetSize');
         const maxIterInput = document.getElementById('maxIter');
@@ -223,8 +258,25 @@
         const reportTable = document.getElementById('report');
         const fileList = document.getElementById('fileList');
         const batchBtn = document.getElementById('batch-download-btn');
+        const langToggle = document.getElementById('lang-toggle');
 
         let downloadQueue = [];
+        let currLang = 'en';
+
+        const i18n = {
+            en: { working: "Working...", done: "Compressed", original: "Original Kept", error: "Error", download: "Download", alertSelect: "Please select images first." },
+            zh: { working: "处理中...", done: "压缩完成", original: "保留原图", error: "错误", download: "下载", alertSelect: "请先选择图片。" }
+        };
+
+        langToggle.onclick = () => {
+            currLang = currLang === 'en' ? 'zh' : 'en';
+            langToggle.innerText = currLang === 'en' ? '中文' : 'English';
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.innerText = el.getAttribute(`data-${currLang}`);
+            });
+            document.querySelector('.lang-en').style.display = currLang === 'en' ? 'block' : 'none';
+            document.querySelector('.lang-zh').style.display = currLang === 'zh' ? 'block' : 'none';
+        };
 
         strategyMode.onchange = () => {
             manualQualityGroup.style.display = strategyMode.value === 'manual' ? 'flex' : 'none';
@@ -234,7 +286,7 @@
             const files = Array.from(fileInput.files);
             const targetKB = parseFloat(targetSizeInput.value);
             const iterations = parseInt(maxIterInput.value) || 10;
-            if (!files.length) return alert('Please select images first.');
+            if (!files.length) return alert(i18n[currLang].alertSelect);
 
             fileList.innerHTML = '';
             reportTable.style.display = 'table';
@@ -249,7 +301,7 @@
 
                 if (originalKB <= targetKB) {
                     const url = URL.createObjectURL(file);
-                    updateRow(row, url, `${originalKB.toFixed(1)} KB`, 'Original Kept', 'status-skip', file.name);
+                    updateRow(row, url, `${originalKB.toFixed(1)} KB`, i18n[currLang].original, 'status-skip', file.name);
                     downloadQueue.push({url, name: file.name});
                 } else {
                     try {
@@ -257,11 +309,11 @@
                         const url = URL.createObjectURL(blob);
                         const finalKB = (blob.size / 1024).toFixed(1);
                         const newName = `compressed_${Math.round(finalKB)}kb_${file.name}`;
-                        updateRow(row, url, `${finalKB} KB`, 'Compressed', 'status-done', newName);
+                        updateRow(row, url, `${finalKB} KB`, i18n[currLang].done, 'status-done', newName);
                         downloadQueue.push({url, name: newName});
                     } catch (e) {
                         console.error(e);
-                        updateRow(row, null, '-', 'Error', 'status-skip', '');
+                        updateRow(row, null, '-', i18n[currLang].error, 'status-skip', '');
                     }
                 }
             }
@@ -283,8 +335,6 @@
             }
 
             let bestBlob = null;
-            
-            // Phase 1: Quality Binary Search
             let lowQ = 0.01, highQ = startQ;
             for (let i = 0; i < iterations; i++) {
                 let midQ = (lowQ + highQ) / 2;
@@ -297,7 +347,6 @@
                 }
             }
 
-            // Phase 2: Scaling Binary Search (If lowest quality still exceeds target)
             if (!bestBlob) {
                 let lowS = 0.05, highS = 1.0;
                 for (let i = 0; i < iterations; i++) {
@@ -332,7 +381,7 @@
                 <td>${file.name}</td>
                 <td>${(file.size / 1024).toFixed(1)} KB</td>
                 <td class="res-size">-</td>
-                <td><span class="status-badge status-working">Working...</span></td>
+                <td><span class="status-badge status-working">${i18n[currLang].working}</span></td>
                 <td class="res-action">-</td>
             `;
             return tr;
@@ -347,7 +396,7 @@
                 const a = document.createElement('a');
                 a.href = url;
                 a.download = downloadName;
-                a.innerText = 'Download';
+                a.innerText = i18n[currLang].download;
                 a.className = 'download-link';
                 row.querySelector('.res-action').innerHTML = '';
                 row.querySelector('.res-action').appendChild(a);

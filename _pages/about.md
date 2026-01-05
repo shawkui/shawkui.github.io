@@ -10,13 +10,11 @@ redirect_from:
 
 👋 Hello! I'm Shaokui Wei (魏少魁).
 
-I am an incoming Assistant Professor at the Shanghai University of Finance and Economics, specifically within the School of Computing and Artificial Intelligence. My work is dedicated to exploring the frontiers of Trustworthy AI—focusing on developing robust, fair, and interpretable machine learning systems that we can truly rely on.
+I am an Assistant Professor at the Shanghai University of Finance and Economics, specifically within the School of Computing and Artificial Intelligence. My work is dedicated to exploring the frontiers of Trustworthy AI—focusing on developing robust, fair, and interpretable machine learning systems that we can truly rely on.
 
 💡My Academic Journey:
 
-I'm currently a visiting researcher at The University of Texas at Dallas, deepening my collaborative research.
-
-I obtained my Ph.D. degree in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHKSZ), under the supervision of Professor [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). From September 2021 to May 2024, I also had the valuable opportunity to collaborate with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/) on related projects.
+I obtained my Ph.D. degree in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHKSZ), under the supervision of Professor [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). After graduation, I spent several months visiting UT Dallas. From September 2021 to May 2024, I also had the valuable opportunity to collaborate with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/) on related projects.
 
 
 Prior to my doctoral studies, I received my Bachelor's degree (ranked No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering, CUHKSZ.
@@ -33,7 +31,11 @@ I am currently seeking opportunities for academic collaboration. If you find my 
 
 News
 ======
+## 2026
+* [2025-01-05] I joined the School of Computing and Artificial Intelligence, Shanghai University of Finance and Economics, as an Assistant Professor.
+
 ## 2025
+* [2025-10] I visit UT Dallas.
 * [2025-09-10] Our survey gets accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI)**.
 * [2025-09-02] One paper gets accepted by **Neural Networks**.
 * [2025-06-26] One paper gets accepted by **ICCV 2025** as **Highlight** paper (Top 5%).

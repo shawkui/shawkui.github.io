@@ -82,12 +82,12 @@ analytics:
 author:
   name             : "Shaokui Wei"
   avatar           : "shaokui.jpg"
-  bio              : "Doctor in Philosophy"
-  location         : "Shenzhen, China"
+  bio              : "Assistant Professor"
+  location         : "Shanghaiƒ, China"
   employer         :
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    :  "https://scholar.google.com/citations?user=WHkEfnsAAAAJ&hl=en"
-  email            :  "shaokuiwei@link.cuhk.edu.cn"
+  email            :  "weishaokui@mail.sufe.edu.cn"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

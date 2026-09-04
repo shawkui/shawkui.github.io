@@ -9,18 +9,20 @@ redirect_from:
 
 {% include base_path %}
 
-[Full CV](https://shawkui.github.io/files/resume_wsk.pdf) 
+Academic Appointments
+======
+* Assistant Professor, School of Computing and Artificial Intelligence, Shanghai University of Finance and Economics, January 2026 - Present
 
 Education
 ======
 * B.S. in Electronic Information Engineering, The Chinese University of Hong Kong, Shenzhen, 2020
-* Ph.D. Candidate in Data Science, The Chinese University of Hong Kong, Shenzhen, 2020 - Present
+* Ph.D. in Data Science, The Chinese University of Hong Kong, Shenzhen, 2020 - 2025
 
-Skills
+Research Interests
 ======
-* Programming Languages: Python, MATLAB, C/C++, Julia, R
-* Development Environments: PyTorch, TensorFlow, Pandas, Linux
-* Languages: English, Fluent. Chinese, Mother Tongue
+* Trustworthy artificial intelligence and machine learning security
+* Backdoor attacks, detection, and mitigation
+* Fairness, robustness, computer vision, and optimization
 
 Publications
 ======
@@ -40,4 +42,3 @@ Teaching
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
   
-

@@ -8,49 +8,48 @@ redirect_from:
   - /about.html
 ---
 
-👋 Hello! I'm Shaokui Wei (魏少魁).
+Hello! I'm **Shaokui Wei (魏少魁)**.
 
-I am an Assistant Professor at the Shanghai University of Finance and Economics, specifically within the School of Computing and Artificial Intelligence. My work is dedicated to exploring the frontiers of Trustworthy AI—focusing on developing robust, fair, and interpretable machine learning systems that we can truly rely on.
-
-💡My Academic Journey:
-
-I obtained my Ph.D. degree in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHKSZ), under the supervision of Professor [**Professor Hongyuan Zha**](https://sds.cuhk.edu.cn/en/teacher/65). After graduation, I spent several months visiting UT Dallas. From September 2021 to May 2024, I also had the valuable opportunity to collaborate with [**Professor Baoyuan Wu**](https://sites.google.com/site/baoyuanwu2015/) on related projects.
-
-
-Prior to my doctoral studies, I received my Bachelor's degree (ranked No.1, first-class honor) in Electronic Information Engineering from the School of Science and Engineering, CUHKSZ.
+I am an Assistant Professor in the [School of Computing and Artificial Intelligence](https://scai.sufe.edu.cn/) at Shanghai University of Finance and Economics (SUFE). My research focuses on trustworthy artificial intelligence, with the goal of building machine learning systems that are secure, robust, fair, and reliable.
 
 Research
 ======
-My research interests mainly lie in AI Security and Fairness, Computer Vision and Optimization, but also include Kernel Methods, Reinforcement Learning, and the application of Machine Learning in economics/marketing.
+My research currently centers on three closely related directions:
 
-<span style="color:#4169E1;">
-<em>
-I am currently seeking opportunities for academic collaboration. If you find my research interests aligned with yours—be it in AI Security, Fairness, Computer Vision, or interdisciplinary applications—I would be delighted to connect and explore potential joint projects.
-</em>
-</span>
+* **AI security:** backdoor attacks, detection, mitigation, and trustworthy model deployment.
+* **Reliable machine learning:** robustness, fairness, and interpretability.
+* **Learning methods and applications:** computer vision, optimization, and interdisciplinary applications of machine learning.
+
+I welcome academic collaborations and discussions with students and researchers whose interests align with these areas. Please feel free to contact me by email with a brief introduction and a description of the topics you would like to explore.
+
+Academic Background
+======
+I received my Ph.D. in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen), under the supervision of [Professor Hongyuan Zha](https://sds.cuhk.edu.cn/en/teacher/65). After graduation, I visited UT Dallas. From September 2021 to May 2024, I also collaborated with [Professor Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/) on research in AI security.
+
+Prior to my doctoral studies, I received my B.Eng. in Electronic Information Engineering with first-class honors from the School of Science and Engineering at CUHK-Shenzhen, graduating first in my class.
 
 News
 ======
 ## 2026
-* [2025-01-05] I joined the School of Computing and Artificial Intelligence, Shanghai University of Finance and Economics, as an Assistant Professor.
+* [2026-01] I joined the School of Computing and Artificial Intelligence at Shanghai University of Finance and Economics as an Assistant Professor.
 
 ## 2025
-* [2025-10] I visit UT Dallas.
-* [2025-09-10] Our survey gets accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (PAMI)**.
-* [2025-09-02] One paper gets accepted by **Neural Networks**.
-* [2025-06-26] One paper gets accepted by **ICCV 2025** as **Highlight** paper (Top 5%).
+* [2025-10] I visited UT Dallas.
+* [2025-09-10] Our survey was accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)**.
+* [2025-09-02] One paper was accepted by **Neural Networks**.
+* [2025-06-26] One paper was accepted by **ICCV 2025** as a **Highlight** paper (Top 5%).
 * [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
 * [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.
-* [2025-03-29] Our second version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning", is accepted to **IJCV 2025**. 
-* [2025-01-23] One papers get accepted by **ICLR 2025**.
+* [2025-03-29] The extended version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning," was accepted by **IJCV**.
+* [2025-01-23] One paper was accepted by **ICLR 2025**.
 
 
 ## 2024
 * [2024-09-26] Two papers get accepted by **NeurIPS 2024**.
 * [2024-08-25] I released some useful tools for academic writing and rebuttal at [here](https://shawkui.github.io/tools/).
-* [2024-05-23] I leave SCLBD, grateful for the invaluable experiences gained.
+* [2024-05-23] I concluded my work with SCLBD, grateful for the invaluable experience.
 * [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
-* [2024-01-13] I receive the **Best Poster Award** in **The 3rd Doctoral & Postdoctoral Academic Forum** held by Shenzhen Research Institute of Big Data.
+* [2024-01-13] I received the **Best Poster Award** at the **3rd Doctoral & Postdoctoral Academic Forum** held by the Shenzhen Research Institute of Big Data.
 
 
 ## 2023
@@ -82,7 +81,7 @@ News
 
 
 
-Fundings and projects
+Funding and Projects
 ======
 * National Natural Science Foundation of China Young Scientists Fund (Category C)
 * Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
@@ -107,7 +106,7 @@ Selected Papers
 * **Backdoor Mitigation by Distance-Driven Detoxification.**  
   *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
   *Publication*: ICCV 2025 (Highlight, Top 5%).  
-  *Links*: [Paper](https://arxiv.org/abs/2411.09585) | [Code]() | [Website]().  
+  *Links*: [Paper](https://arxiv.org/abs/2411.09585).
 
 
 * **Mitigating Backdoor Attack by Injecting Proactive Defensive Backdoor.**  
@@ -144,18 +143,18 @@ Selected Papers
 * **WPDA: frequency-based backdoor attack with wavelet packet decomposition.**  
   *Authors*: Zhengyao Song, Yongqiang Li, Danni Yuan, Li Liu, **Shaokui Wei**, Baoyuan Wu.  
   *Publication*: Neural Networks 2026.  
-  *Links*: [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0893608025009542) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
+  *Links*: [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0893608025009542) | [Code](https://github.com/SCLBD/BackdoorBench).
 
 * **Defenses in Adversarial Machine Learning: a Systematic Survey from the Lifecycle Perspective.**  
   *Authors*: Baoyuan Wu, Mingli Zhu, Meixi Zheng, Zihao Zhu, **Shaokui Wei**, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.
   *Publication*: IEEE Transactions on Pattern Analysis and Machine Intelligence 2025.  
-  *Links*: [Paper](https://ieeexplore.ieee.org/document/11169420) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website]().  
+  *Links*: [Paper](https://ieeexplore.ieee.org/document/11169420) | [Code](https://github.com/SCLBD/BackdoorBench).
 
 
 * **Activation Gradient based Poisoned Sample Detection Against Backdoor Attacks.**  
   *Authors*: Danni Yuan, **Shaokui Wei**, Mingda Zhang, Li Liu, Baoyuan Wu.  
   *Publication*: ICLR 2025.  
-  *Links*: [Paper](https://arxiv.org/pdf/2312.06230) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/detection_pretrain/agpd.py) | [Website]().  
+  *Links*: [Paper](https://arxiv.org/pdf/2312.06230) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/detection_pretrain/agpd.py).
 
 * **Unveiling and Mitigating Backdoor Vulnerabilities based on Unlearning Weight Changes and Backdoor Activeness.**  
   *Authors*: Weilin Lin, Li Liu, **Shaokui Wei**, Jianze Li, Hui Xiong  
@@ -187,8 +186,5 @@ Selected Preprints
   *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.  
   *Status*: Under review.  
   *Links*: [Paper](https://arxiv.org/pdf/2502.18520)
-
-
-
 
 

@@ -5,6 +5,8 @@ permalink: /publication/NPD
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2023-09-22
 venue: 'Thirty-seventh Conference on Neural Information Processing Systems. NeurIPS 2023.'
+venue_short: 'NeurIPS'
+thumbnail: 'npd.png'
 paperurl: 'https://arxiv.org/pdf/2306.16697'
 citation: 'Zhu, Mingli, Shaokui Wei (co-first author), et al. "Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features." Thirty-seventh Conference on Neural Information Processing Systems. NeurIPS 2023.'
 ---

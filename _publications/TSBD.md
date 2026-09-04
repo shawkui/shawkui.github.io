@@ -5,6 +5,8 @@ permalink: /publication/TSBD
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-09-26
 venue: 'Thirty-eighth Conference on Neural Information Processing Systems. NeurIPS 2024.'
+venue_short: 'NeurIPS'
+thumbnail: 'tsbd.png'
 paperurl: 'https://arxiv.org/pdf/2405.20291'
 citation: 'Lin, Weilin, et al. "Unveiling and Mitigating Backdoor Vulnerabilities based on Unlearning Weight Changes and Backdoor Activeness." Thirty-eighth Conference on Neural Information Processing Systems. NeurIPS 2024.'
 ---

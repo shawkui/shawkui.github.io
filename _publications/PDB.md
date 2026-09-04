@@ -5,6 +5,8 @@ permalink: /publication/PDB
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2024-09-26
 venue: 'Thirty-eighth Conference on Neural Information Processing Systems. NeurIPS 2024.'
+venue_short: 'NeurIPS'
+thumbnail: 'pdb.png'
 paperurl: 'https://arxiv.org/pdf/2405.16112'
 citation: 'Wei, Shaokui, et al. "Mitigating Backdoor Attack by Injecting Proactive Defensive Backdoor." Thirty-eighth Conference on Neural Information Processing Systems. NeurIPS 2024.'
 ---

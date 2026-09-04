@@ -5,6 +5,8 @@ permalink: /publication/FT_SAM
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2023-07-13
 venue: '2023 International Conference on Computer Vision'
+venue_short: 'ICCV'
+thumbnail: 'iccv2023_FT_SAM.png'
 paperurl: 'https://arxiv.org/pdf/2304.11823'
 citation: 'Zhu, Mingli, et al. "Enhancing Fine-Tuning Based Backdoor Defense with Sharpness-Aware Minimization." 2023 International Conference on Computer Vision"'
 ---

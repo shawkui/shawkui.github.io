@@ -5,6 +5,8 @@ permalink: /publication/SAU
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2023-09-22
 venue: 'Thirty-seventh Conference on Neural Information Processing Systems. NeurIPS 2023.'
+venue_short: 'NeurIPS'
+thumbnail: 'sau.png'
 paperurl: 'https://arxiv.org/pdf/2307.10562.pdf'
 citation: 'Wei, Shaokui, et al. "Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples." Thirty-seventh Conference on Neural Information Processing Systems. NeurIPS 2023.'
 ---

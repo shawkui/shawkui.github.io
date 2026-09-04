@@ -5,6 +5,8 @@ permalink: /publication/MP_fair
 # excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
 date: 2023-01-20
 venue: 'AISTATS 2023'
+venue_short: 'AISTATS'
+thumbnail: 'MP_demo.png'
 paperurl: 'https://proceedings.mlr.press/v206/wei23a/wei23a.pdf'
 citation: 'Wei, Shaokui, et al. "Mean Parity Fair Regression in RKHS" AISTATS 2023.'
 ---

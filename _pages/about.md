@@ -84,6 +84,7 @@ News
 
 Fundings and projects
 ======
+* National Natural Science Foundation of China Young Scientists Fund (Category C)
 * Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
 
   

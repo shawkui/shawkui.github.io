@@ -172,6 +172,11 @@
   box-shadow: 0 0 10px rgba(#000, 0.25);
   cursor: default;
 
+  li,
+  a {
+    overflow-wrap: anywhere;
+  }
+
   @include breakpoint($large) {
     display: block;
     position: relative;

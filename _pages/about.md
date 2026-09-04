@@ -12,6 +12,8 @@ Hello! I'm **Shaokui Wei (魏少魁)**.
 
 I am an Assistant Professor in the [School of Computing and Artificial Intelligence](https://scai.sufe.edu.cn/) at Shanghai University of Finance and Economics (SUFE). My research focuses on **trustworthy artificial intelligence**, with the goal of building machine learning systems that are secure, robust, fair, and reliable.
 
+I received my Ph.D. in Data Science from The Chinese University of Hong Kong, Shenzhen, under the supervision of [Professor Hongyuan Zha](https://sds.cuhk.edu.cn/en/teacher/65). I also received my B.Eng. in Electronic Information Engineering from the same university, graduating first in my class with first-class honors.
+
 Research
 ======
 My work centers on machine learning security, particularly backdoor attacks and defenses, as well as robustness and fairness in modern AI systems. I am also interested in the connections between trustworthy AI, computer vision, and optimization.
@@ -46,7 +48,3 @@ Funding
 ======
 * National Natural Science Foundation of China Young Scientists Fund (Category C)
 * Daoyuan Youth Fund Project — Class I (道远 I 类青年基金项目)
-
-Background
-======
-I received my Ph.D. in Data Science from The Chinese University of Hong Kong, Shenzhen, under the supervision of [Professor Hongyuan Zha](https://sds.cuhk.edu.cn/en/teacher/65). I received my B.Eng. in Electronic Information Engineering with first-class honors from the same university, graduating first in my class.

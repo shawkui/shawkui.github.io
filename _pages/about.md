@@ -3,188 +3,50 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
 Hello! I'm **Shaokui Wei (魏少魁)**.
 
-I am an Assistant Professor in the [School of Computing and Artificial Intelligence](https://scai.sufe.edu.cn/) at Shanghai University of Finance and Economics (SUFE). My research focuses on trustworthy artificial intelligence, with the goal of building machine learning systems that are secure, robust, fair, and reliable.
+I am an Assistant Professor in the [School of Computing and Artificial Intelligence](https://scai.sufe.edu.cn/) at Shanghai University of Finance and Economics (SUFE). My research focuses on **trustworthy artificial intelligence**, with the goal of building machine learning systems that are secure, robust, fair, and reliable.
 
 Research
 ======
-My research currently centers on three closely related directions:
+My work centers on machine learning security, particularly backdoor attacks and defenses, as well as robustness and fairness in modern AI systems. I am also interested in the connections between trustworthy AI, computer vision, and optimization.
 
-* **AI security:** backdoor attacks, detection, mitigation, and trustworthy model deployment.
-* **Reliable machine learning:** robustness, fairness, and interpretability.
-* **Learning methods and applications:** computer vision, optimization, and interdisciplinary applications of machine learning.
-
-I welcome academic collaborations and discussions with students and researchers whose interests align with these areas. Please feel free to contact me by email with a brief introduction and a description of the topics you would like to explore.
-
-Academic Background
+Research Highlights
 ======
-I received my Ph.D. in Data Science from the School of Data Science, The Chinese University of Hong Kong, Shenzhen (CUHK-Shenzhen), under the supervision of [Professor Hongyuan Zha](https://sds.cuhk.edu.cn/en/teacher/65). After graduation, I visited UT Dallas. From September 2021 to May 2024, I also collaborated with [Professor Baoyuan Wu](https://sites.google.com/site/baoyuanwu2015/) on research in AI security.
+* **Backdoor defense.** I study how backdoors can be identified and removed from compromised models, including adversarial-unlearning, proactive-defense, and distance-driven approaches. Recent work includes an [ICCV 2025 Highlight](https://arxiv.org/abs/2411.09585), [PDB](/publication/PDB), and [SAU](/publication/SAU).
 
-Prior to my doctoral studies, I received my B.Eng. in Electronic Information Engineering with first-class honors from the School of Science and Engineering at CUHK-Shenzhen, graduating first in my class.
+* **Evaluation and benchmarking.** I co-developed [BackdoorBench](https://backdoorbench.github.io/), an extensible benchmark for reproducible evaluation of backdoor attacks and defenses. The project appeared at NeurIPS 2022 and was extended in IJCV 2025.
+
+* **Fair and reliable learning.** Beyond security, I study principled learning methods that balance predictive performance with fairness and robustness, including [mean-parity fair regression](https://proceedings.mlr.press/v206/wei23a/wei23a.pdf).
+
+[View all publications →](/publications/)
 
 News
 ======
-## 2026
-* [2026-01] I joined the School of Computing and Artificial Intelligence at Shanghai University of Finance and Economics as an Assistant Professor.
+* **Jan. 2026** — Joined SUFE as an Assistant Professor.
+* **Sep. 2025** — Our survey was accepted by IEEE TPAMI.
+* **Sep. 2025** — One paper was accepted by *Neural Networks*.
+* **Jun. 2025** — One paper was selected as an ICCV 2025 Highlight (Top 5%).
+* **May 2025** — Selected as a Top Reviewer at ICML 2025.
+* **Mar. 2025** — The extended version of BackdoorBench was accepted by IJCV.
 
-## 2025
-* [2025-10] I visited UT Dallas.
-* [2025-09-10] Our survey was accepted by **IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)**.
-* [2025-09-02] One paper was accepted by **Neural Networks**.
-* [2025-06-26] One paper was accepted by **ICCV 2025** as a **Highlight** paper (Top 5%).
-* [2025-05-29] I was selected as Top Reviewer of **ICML 2025**.
-* [2025-05-08] I successfully passed my thesis oral defense. I would like to thank the committee members: Prof. Hongyuan Zha, Prof. Ming Yan, Prof. Jicong Fan, Prof. Irwin King, and Prof. Li Shen.
-* [2025-03-29] The extended version of BackdoorBench, "BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning," was accepted by **IJCV**.
-* [2025-01-23] One paper was accepted by **ICLR 2025**.
+Teaching
+======
+* **Python Programming**, 2026–2027 Term 1
+* **Computer Programming**, 2025–2026 Term 2
 
+[View teaching experience →](/teaching/)
 
-## 2024
-* [2024-09-26] Two papers get accepted by **NeurIPS 2024**.
-* [2024-08-25] I released some useful tools for academic writing and rebuttal at [here](https://shawkui.github.io/tools/).
-* [2024-05-23] I concluded my work with SCLBD, grateful for the invaluable experience.
-* [2024-01-16] One paper gets accepted by **ICLR 2024**, in close collaboration with Zihao Zhu and Mingda Zhang.
-* [2024-01-13] I received the **Best Poster Award** at the **3rd Doctoral & Postdoctoral Academic Forum** held by the Shenzhen Research Institute of Big Data.
-
-
-## 2023
-* [2023-12-27] I receive the **Guo Tai Jun An Scholarship** to recognize my outstanding research achievements from 2020-2023. 
-* [2023-12-15] We release **Defenses in Adversarial Machine Learning: A Survey**, a comprehensive survey for defense methods in adversarial machine learning. The draft is available at [this link](https://arxiv.org/abs/2312.08890).
-* [2023-12-15] I receive the **2023 Duan Yong Ping Travel Award** to recognize my outstanding research achievements in academic year 2022-2023. 
-* [2023-10-03] I was invited as a guest speaker for the tutorial **Backdoor Learning: Recent Advances and Future Trends** in **ICCV 2023**. Slides are available at [this link](https://backdoor-learning-tutorial.github.io/).
-* [2023-09-22] Two papers get accepted by **NeurIPS 2023**, in close collaboration with Mingli Zhu and Mingda Zhang.
-* [2023-07-18] One paper gets accepted by **ICCV 2023**, in close collaboration with Mingli Zhu.
-* [2023-04-21] **BackdoorBench** is updated to **the 2nd version** with more methods and analysis tools involved. The code and data are available at [this link](https://github.com/SCLBD/BackdoorBench/tree/main).
-* [2023-01-20] One paper gets accepted by **AISTATS 2023**, in close collaboration with Jiayin Liu.
-
-
-<details>
-    <summary>2022 & Before</summary>
-    <ul>
-      <li>
-       [2022-09-19] One paper gets accepted by <strong>NeurIPS 2022 Datasets and Benchmarks Track</strong>, in close collaboration with our team in SCLBD.
-      </li>
-      <li>
-      [2022-06-28] We release <strong>BackdoorBench</strong>: a comprehensive benchmark of backdoor attack and defense methods. The code and data are available at <a href="https://github.com/SCLBD/BackdoorBench/tree/v1">this link</a>.
-      </li>
-      <li>
-       [2021-08-01] I join SCLBD to focus on AI Security research.
-      </li>
-    </ul>
-</details>
-<br>
-
-
-
-Funding and Projects
+Funding
 ======
 * National Natural Science Foundation of China Young Scientists Fund (Category C)
-* Daoyuan Youth Fund Project - Class I (道远I类青年基金项目)
+* Daoyuan Youth Fund Project — Class I (道远 I 类青年基金项目)
 
-  
-Awards
+Background
 ======
-* Best Poster Award in The 3rd Doctoral & Postdoctoral Academic Forum
-* 2023 Guo Tai Jun An Scholarship
-* 2023 Duan Yong Ping Travel Award
-* AIRS Talent of Ph.D. Research Program of Academic Year of 2020-2021
-
-Patents
-======
-* **Shaokui Wei**, Baoyuan Wu, Mingda Zhang, Hongyuan Zha. Method and system for eliminating shared adversarial samples in backdoor defense (一种后门防御中消除共享对抗样本的方法及后门防御系统). China. Patent No. CN117390622A. Jan. 12, 2024.
-* Mingli Zhu, **Shaokui Wei**, Baoyuan Wu. Method and system for backdoor defense by purifying toxic features through neural polarizers (通过神经偏振器净化有毒特征的后门防御方法及系统). China. Patent No. CN116629319A. Aug. 22, 2023.
-* Baoyuan Wu, Mingli Zhu, **Shaokui Wei**, Li Shen, Yanbo Fan. Backdoor defense method, terminal device, and computer-readable storage medium. China (后门防御方法、终端设备及计算机可读存储介质). Patent No. CN116578974A. Aug. 11, 2023.
-
-Selected Papers 
-======
-(*Indicates equal contribution, #Indicates corresponding author)
-* **Backdoor Mitigation by Distance-Driven Detoxification.**  
-  *Authors*: **Shaokui Wei**, Jiayin Liu, Hongyuan Zha.  
-  *Publication*: ICCV 2025 (Highlight, Top 5%).  
-  *Links*: [Paper](https://arxiv.org/abs/2411.09585).
-
-
-* **Mitigating Backdoor Attack by Injecting Proactive Defensive Backdoor.**  
-  *Authors*: **Shaokui Wei**, Hongyuan Zha, Baoyuan Wu.  
-  *Publication*: NeurIPS 2024.  
-  *Links*: [Paper](https://arxiv.org/pdf/2405.16112) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/PDB).  
-
-* **Shared Adversarial Unlearning: Backdoor Mitigation by Unlearning Shared Adversarial Examples.**  
-  *Authors*: **Shaokui Wei**, Mingda Zhang, Hongyuan Zha, Baoyuan Wu.  
-  *Publication*: NeurIPS 2023.  
-  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/520425a5a4c2fb7f7fc345078b188201-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/sau.py) | [Website](https://shawkui.github.io/publication/SAU).  
-  
-* **Neural Polarizer: A Lightweight and Effective Backdoor Defense via Purifying Poisoned Features.**  
-  *Authors*: Mingli Zhu * , **Shaokui Wei** * , Hongyuan Zha, Baoyuan Wu.  
-  *Publication*: NeurIPS 2023.  
-  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2023/file/03df5246cc78af497940338dd3eacbaa-Paper-Conference.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/npd.py) | [Website](https://shawkui.github.io/publication/NPD).  
-
-* **Mean Parity Fair Regression in RKHS.**  
-  *Authors*: **Shaokui Wei**, Jiayin Liu, Bing Li, Hongyuan Zha.  
-  *Publication*: AISTATS 2023.  
-  *Links*: [Paper](https://proceedings.mlr.press/v206/wei23a/wei23a.pdf) | [Code](https://github.com/shawkui/MP_Fair_Regression) | [Website](https://shawkui.github.io/publication/MP_fair).
-
-* **BackdoorBench: A Comprehensive Benchmark and Analysis of Backdoor Learning.**  
-  *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Mingli Zhu, Ruotong Wang, Li Liu, Chao Shen.
-  *Publication*:  International Journal of Computer Vision 2025.  
-  *Links*: [Paper](https://link.springer.com/article/10.1007/s11263-025-02447-x) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
-
-
-* **Backdoorbench: A comprehensive benchmark of backdoor learning.**  
-  *Authors*: Baoyuan Wu, Hongrui Chen, Mingda Zhang, Zihao Zhu, **Shaokui Wei**, Danni Yuan, Chao Shen.  
-  *Publication*: NeurIPS 2022 Dataset and Benchmark Track.  
-  *Links*: [Paper](https://proceedings.neurips.cc/paper_files/paper/2022/file/4491ea1c91aa2b22c373e5f1dfce234f-Paper-Datasets_and_Benchmarks.pdf) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://backdoorbench.github.io/).  
-
-* **WPDA: frequency-based backdoor attack with wavelet packet decomposition.**  
-  *Authors*: Zhengyao Song, Yongqiang Li, Danni Yuan, Li Liu, **Shaokui Wei**, Baoyuan Wu.  
-  *Publication*: Neural Networks 2026.  
-  *Links*: [Paper](https://www.sciencedirect.com/science/article/abs/pii/S0893608025009542) | [Code](https://github.com/SCLBD/BackdoorBench).
-
-* **Defenses in Adversarial Machine Learning: a Systematic Survey from the Lifecycle Perspective.**  
-  *Authors*: Baoyuan Wu, Mingli Zhu, Meixi Zheng, Zihao Zhu, **Shaokui Wei**, Mingda Zhang, Hongrui Chen, Danni Yuan, Li Liu, Qingshan Liu.
-  *Publication*: IEEE Transactions on Pattern Analysis and Machine Intelligence 2025.  
-  *Links*: [Paper](https://ieeexplore.ieee.org/document/11169420) | [Code](https://github.com/SCLBD/BackdoorBench).
-
-
-* **Activation Gradient based Poisoned Sample Detection Against Backdoor Attacks.**  
-  *Authors*: Danni Yuan, **Shaokui Wei**, Mingda Zhang, Li Liu, Baoyuan Wu.  
-  *Publication*: ICLR 2025.  
-  *Links*: [Paper](https://arxiv.org/pdf/2312.06230) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/detection_pretrain/agpd.py).
-
-* **Unveiling and Mitigating Backdoor Vulnerabilities based on Unlearning Weight Changes and Backdoor Activeness.**  
-  *Authors*: Weilin Lin, Li Liu, **Shaokui Wei**, Jianze Li, Hui Xiong  
-  *Publication*: NeurIPS 2024.  
-  *Links*: [Paper](https://arxiv.org/pdf/2405.20291) | [Code](https://github.com/SCLBD/BackdoorBench) | [Website](https://shawkui.github.io/publication/TSBD).  
-
-
-* **VDC: Versatile Data Cleanser for Detecting Dirty Samples via Visual-Linguistic Inconsistency.**  
-  *Authors*: Zihao Zhu, Mingda Zhang, **Shaokui Wei**, Bingzhe Wu, Baoyuan Wu.  
-  *Publication*: ICLR 2024.  
-  *Links*: [Paper](https://openreview.net/pdf?id=ygxTuVz9eU) | [Code](https://github.com/zihao-ai/vdc) | [Website](https://versatile-data-cleanser.github.io/).  
-  
-  
-* **Enhancing Fine-Tuning Based Backdoor Defense with Sharpness-Aware Minimization.**  
-  *Authors*: Mingli Zhu, **Shaokui Wei**, Li Shen, Yanbo Fan, Baoyuan Wu.  
-  *Publication*: ICCV 2023.  
-  *Links*: [Paper](http://openaccess.thecvf.com/content/ICCV2023/papers/Zhu_Enhancing_Fine-Tuning_Based_Backdoor_Defense_with_Sharpness-Aware_Minimization_ICCV_2023_paper.pdf) | [Code](https://github.com/SCLBD/BackdoorBench/blob/main/defense/ft-sam.py) | [Website](https://shawkui.github.io/publication/FT_SAM).  
-
-
-Selected Preprints
-======
-(*Indicates equal contribution, #Indicates corresponding author)
-* **Revisiting the Auxiliary Data in Backdoor Purification.**  
-  *Authors*: **Shaokui Wei**, Shanchao Yang, Jiayin Liu, Hongyuan Zha.  
-  *Status*: Under review.  
-  *Links*: [Paper](https://arxiv.org/pdf/2502.07231) | [Code](https://github.com/shawkui/BackdoorBenchER) 
-
-* **Class-Conditional Neural Polarizer: A Lightweight and Effective Backdoor Defense by Purifying Poisoned Features.**  
-  *Authors*: Mingli Zhu *, **Shaokui Wei** *, Hongyuan Zha, Baoyuan Wu.  
-  *Status*: Under review.  
-  *Links*: [Paper](https://arxiv.org/pdf/2502.18520)
-
-
+I received my Ph.D. in Data Science from The Chinese University of Hong Kong, Shenzhen, under the supervision of [Professor Hongyuan Zha](https://sds.cuhk.edu.cn/en/teacher/65). I received my B.Eng. in Electronic Information Engineering with first-class honors from the same university, graduating first in my class.

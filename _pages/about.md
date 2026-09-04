@@ -28,6 +28,12 @@ Research Highlights
 
 [View all publications →](/publications/)
 
+Research Opportunities
+======
+I am always looking for motivated **Ph.D. students**, **master's students**, and **research assistants** (undergraduate or master's level) who are interested in trustworthy AI. Relevant topics include machine learning security, backdoor attacks and defenses, robustness, fairness, and reliable AI systems.
+
+If you are interested in working with me, please feel free to contact me by email with your CV and a brief introduction to your research interests.
+
 News
 ======
 * **Jan. 2026** — Joined SUFE as an Assistant Professor.

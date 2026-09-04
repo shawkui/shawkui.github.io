@@ -3,6 +3,7 @@ permalink: /
 title: "About me"
 excerpt: "About me"
 author_profile: true
+page_class: "page--home"
 redirect_from:
   - /about/
   - /about.html
@@ -18,42 +19,56 @@ Research
 
 My work centers on machine learning security, particularly backdoor attacks and defenses, as well as robustness and fairness in modern AI systems. I am also interested in the connections between trustworthy AI, computer vision, and optimization.
 
-Research Highlights
-===================
-
-* **Backdoor defense.** I study how backdoors can be identified and removed from compromised models, including adversarial-unlearning, proactive-defense, and distance-driven approaches. Recent work includes an [D3](https://arxiv.org/abs/2411.09585), [PDB](/publication/PDB), and [SAU](/publication/SAU).
-* **Evaluation and benchmarking.** I co-developed [BackdoorBench](https://backdoorbench.github.io/), an extensible benchmark for reproducible evaluation of backdoor attacks and defenses. The project appeared at NeurIPS 2022 and was extended in IJCV 2025.
-* **Fair and reliable learning.** Beyond security, I study principled learning methods that balance predictive performance with fairness and robustness, including [mean-parity fair regression](https://proceedings.mlr.press/v206/wei23a/wei23a.pdf).
+<div class="home-research-grid">
+  <section class="home-research-card">
+    <h3>Backdoor Defense</h3>
+    <p>Identifying and removing backdoors from compromised models through adversarial unlearning, proactive defense, and distance-driven detoxification.</p>
+    <p class="home-research-card__links"><a href="/publication/D3">D3</a> · <a href="/publication/PDB">PDB</a> · <a href="/publication/SAU">SAU</a></p>
+  </section>
+  <section class="home-research-card">
+    <h3>Evaluation &amp; Benchmarking</h3>
+    <p>Building reliable and reproducible evaluation systems for backdoor attacks and defenses.</p>
+    <p class="home-research-card__links"><a href="https://backdoorbench.github.io/">BackdoorBench</a></p>
+  </section>
+  <section class="home-research-card">
+    <h3>Fair &amp; Reliable Learning</h3>
+    <p>Developing principled learning methods that balance predictive performance with fairness and robustness.</p>
+    <p class="home-research-card__links"><a href="/publication/MP_fair">Mean Parity Regression</a></p>
+  </section>
+</div>
 
 [View all publications →](/publications/)
 
-Research Opportunities
-======================
-
-I am always looking for motivated **Ph.D. students**, **master's students**, and **research assistants** (undergraduate or master's level) who are interested in trustworthy AI. Relevant topics include machine learning security, backdoor attacks and defenses, robustness, fairness, and reliable AI systems.
-
-If you are interested in working with me, please feel free to contact me by email with your CV and a brief introduction to your research interests.
+<section class="home-opportunity">
+  <p class="home-opportunity__eyebrow">We are recruiting</p>
+  <h2>Research Opportunities</h2>
+  <p>I am always looking for motivated <strong>Ph.D. students</strong>, <strong>master's students</strong>, and <strong>research assistants</strong> (undergraduate or master's level) interested in trustworthy AI.</p>
+  <p>Relevant topics include machine learning security, backdoor attacks and defenses, robustness, fairness, and reliable AI systems.</p>
+  <a class="btn btn--primary" href="mailto:weishaokui@mail.sufe.edu.cn">Get in touch</a>
+</section>
 
 News
 ====
 
 * **Jan. 2026** — Joined SUFE as an Assistant Professor.
 * **Sep. 2025** — Our survey was accepted by IEEE TPAMI.
-* **Sep. 2025** — One paper was accepted by *Neural Networks*.
 * **Jun. 2025** — One paper was selected as an ICCV 2025 Highlight (Top 5%).
 * **May 2025** — Selected as a Top Reviewer at ICML 2025.
-* **Mar. 2025** — The extended version of BackdoorBench was accepted by IJCV.
 
-Teaching
-========
-
-* **Python Programming**, 2026–2027 Term 1
-* **Computer Programming**, 2025–2026 Term 2
-
-[View teaching experience →](/teaching/)
-
-Funding
-=======
-
-* National Natural Science Foundation of China Young Scientists Fund (Category C) （国家自然科学基金**青年科学基金项目（C类）**）
-* Daoyuan Youth Fund Project — Class I (道远 I 类青年基金项目)
+<div class="home-meta-grid">
+  <section>
+    <h2>Teaching</h2>
+    <ul>
+      <li><strong>Python Programming</strong><br><span>2026–2027 Term 1</span></li>
+      <li><strong>Computer Programming</strong><br><span>2025–2026 Term 2</span></li>
+    </ul>
+    <p><a href="/teaching/">View teaching experience →</a></p>
+  </section>
+  <section>
+    <h2>Funding</h2>
+    <ul>
+      <li>NSFC Young Scientists Fund (Category C)</li>
+      <li>Daoyuan Youth Fund Project — Class I</li>
+    </ul>
+  </section>
+</div>

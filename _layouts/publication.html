@@ -1,0 +1,50 @@
+---
+layout: default
+---
+
+{% include base_path %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <article class="page publication-detail" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <div class="page__inner-wrap">
+      <p class="publication-detail__back"><a href="{{ base_path }}/publications/">← All publications</a></p>
+
+      <header class="publication-detail__header">
+        <h1 class="page__title" itemprop="headline">{{ page.title }}</h1>
+
+        {% if page.authors %}
+          <p class="publication-detail__authors" itemprop="author">
+            {% for author_name in page.authors %}{% if author_name == "Shaokui Wei" %}<strong>{{ author_name }}</strong>{% else %}{{ author_name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+          </p>
+        {% endif %}
+
+        <p class="publication-detail__venue">
+          {{ page.venue }}{% if page.date %}, {{ page.date | date: "%Y" }}{% endif %}
+          {% if page.award %}<span class="publication-badge">{{ page.award }}</span>{% endif %}
+        </p>
+
+        <div class="publication-detail__links">
+          {% if page.paperurl %}<a class="btn btn--primary" href="{{ page.paperurl }}">Paper</a>{% endif %}
+          {% if page.codeurl %}<a class="btn" href="{{ page.codeurl }}">Code</a>{% endif %}
+          {% if page.projecturl %}<a class="btn" href="{{ page.projecturl }}">Project</a>{% endif %}
+        </div>
+      </header>
+
+      {% if page.thumbnail %}
+        <img class="publication-detail__image" src="{{ page.thumbnail | prepend: '/images/' | prepend: base_path }}" alt="Figure from {{ page.title }}">
+      {% endif %}
+
+      <section class="page__content" itemprop="abstract">
+        <h2>Abstract</h2>
+        {{ content }}
+
+        {% if page.citation %}
+          <h2>Citation</h2>
+          <div class="publication-detail__citation">{{ page.citation }}</div>
+        {% endif %}
+      </section>
+    </div>
+  </article>
+</div>

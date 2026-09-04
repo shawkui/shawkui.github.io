@@ -5,16 +5,24 @@
     <a class="publication-item__thumbnail" href="{{ base_path }}{{ post.url }}" aria-label="Read {{ post.title }}">
       <img src="{{ post.thumbnail | prepend: '/images/' | prepend: base_path }}" alt="" loading="lazy">
     </a>
+  {% else %}
+    <a class="publication-item__thumbnail publication-item__placeholder" href="{{ base_path }}{{ post.url }}" aria-label="Read {{ post.title }}">
+      <span>{{ post.venue_short | default: "Publication" }}</span>
+    </a>
   {% endif %}
 
   <div class="publication-item__content">
     <h3 class="publication-item__title" itemprop="headline">
       <a href="{{ base_path }}{{ post.url }}">{{ post.title }}</a>
     </h3>
+    {% if post.authors %}
+      <p class="publication-item__authors">
+        {% for author_name in post.authors %}{% if author_name == "Shaokui Wei" %}<strong>{{ author_name }}</strong>{% else %}{{ author_name }}{% endif %}{% unless forloop.last %}, {% endunless %}{% endfor %}
+      </p>
+    {% endif %}
     <p class="publication-item__meta">
       <span>{{ post.venue_short | default: post.venue }}</span>
-      <span aria-hidden="true"> · </span>
-      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y" }}</time>
+      {% if post.award %}<span class="publication-badge">{{ post.award }}</span>{% endif %}
     </p>
   </div>
 </article>
